@@ -1,5 +1,5 @@
 {
-  "version": "demo-50-v4-visual-p2",
+  "version": "demo-50-v5-multimodel",
   "run_id": "qwen35-9b-sft844-3k-v2-toolcall",
   "checkpoint": "export-844",
   "task_ids": [
@@ -241,5 +241,4207 @@
       }
     }
   },
-  "eschikon_terms": "Eschikon-derived evidence and replay files retain upstream InC-NC rights; non-commercial research demonstration. Excluded from the CC BY-SA replay grant."
+  "eschikon_terms": "Eschikon-derived evidence and replay files retain upstream InC-NC rights; non-commercial research demonstration. Excluded from the CC BY-SA replay grant.",
+  "models": [
+    {
+      "id": "ours",
+      "name": "Ours · Qwen3.5-9B",
+      "group": "ours",
+      "protocol": "Native tool calls · thinking",
+      "detail": "Base: Qwen3.5-9B · SFT on Kimi2.6 trajectories",
+      "available_count": 50
+    },
+    {
+      "id": "qwen9b",
+      "name": "Qwen3.5-9B",
+      "group": "open",
+      "protocol": "Native tool calls · thinking",
+      "detail": "Base model · native tool calls",
+      "available_count": 50
+    },
+    {
+      "id": "kimi26",
+      "name": "Kimi2.6",
+      "group": "open",
+      "protocol": "Native tool calls · thinking",
+      "detail": "Teacher model · native tool calls",
+      "available_count": 50
+    },
+    {
+      "id": "qwen27b",
+      "name": "Qwen3.5-27B",
+      "group": "open",
+      "protocol": "Recorded JSON action protocol",
+      "detail": "Qwen3.5-27B · saved evaluation",
+      "available_count": 50
+    },
+    {
+      "id": "qwen9b-json",
+      "name": "Qwen3.5-9B · JSON",
+      "group": "open",
+      "protocol": "Recorded JSON action protocol",
+      "detail": "Qwen3.5-9B · JSON · saved evaluation",
+      "available_count": 50
+    },
+    {
+      "id": "gemma4",
+      "name": "Gemma4-31B",
+      "group": "open",
+      "protocol": "Recorded JSON action protocol",
+      "detail": "Gemma4-31B · saved evaluation",
+      "available_count": 50
+    },
+    {
+      "id": "muse",
+      "name": "Muse Glimmer 30B",
+      "group": "open",
+      "protocol": "Recorded JSON action protocol",
+      "detail": "Muse Glimmer 30B · saved evaluation",
+      "available_count": 1
+    },
+    {
+      "id": "claude55",
+      "name": "Claude Opus 5.5",
+      "group": "closed",
+      "protocol": "Recorded API JSON actions",
+      "detail": "Claude Opus 5.5 · saved evaluation",
+      "available_count": 50
+    },
+    {
+      "id": "gpt54",
+      "name": "GPT-5.4",
+      "group": "closed",
+      "protocol": "Recorded API JSON actions",
+      "detail": "GPT-5.4 · saved evaluation",
+      "available_count": 50
+    },
+    {
+      "id": "gpt6astra",
+      "name": "GPT-6-Astra",
+      "group": "closed",
+      "protocol": "Recorded API JSON actions",
+      "detail": "GPT-6-Astra · saved evaluation",
+      "available_count": 50
+    },
+    {
+      "id": "grok47",
+      "name": "Grok 4.7",
+      "group": "closed",
+      "protocol": "Recorded API JSON actions",
+      "detail": "Grok 4.7 · saved evaluation",
+      "available_count": 50
+    }
+  ],
+  "run_count": 501,
+  "model_recordings": {
+    "a_0f7c3a059169f9fca06f87393185a08d": {
+      "ours": {
+        "file": "cases/a_0f7c3a059169f9fca06f87393185a08d.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_0f7c3a059169f9fca06f87393185a08d.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_0f7c3a059169f9fca06f87393185a08d.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_0f7c3a059169f9fca06f87393185a08d.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_0f7c3a059169f9fca06f87393185a08d.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_0f7c3a059169f9fca06f87393185a08d.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_0f7c3a059169f9fca06f87393185a08d.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_0f7c3a059169f9fca06f87393185a08d.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_0f7c3a059169f9fca06f87393185a08d.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_0f7c3a059169f9fca06f87393185a08d.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      }
+    },
+    "a_18f47e78fb3e9b7699e5e7f473a4651e": {
+      "ours": {
+        "file": "cases/a_18f47e78fb3e9b7699e5e7f473a4651e.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_18f47e78fb3e9b7699e5e7f473a4651e.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_18f47e78fb3e9b7699e5e7f473a4651e.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_18f47e78fb3e9b7699e5e7f473a4651e.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_18f47e78fb3e9b7699e5e7f473a4651e.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_18f47e78fb3e9b7699e5e7f473a4651e.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_18f47e78fb3e9b7699e5e7f473a4651e.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_18f47e78fb3e9b7699e5e7f473a4651e.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_18f47e78fb3e9b7699e5e7f473a4651e.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_18f47e78fb3e9b7699e5e7f473a4651e.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_1f0c9b80435dfd95a9c277a9397ff2d2": {
+      "ours": {
+        "file": "cases/a_1f0c9b80435dfd95a9c277a9397ff2d2.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_1f0c9b80435dfd95a9c277a9397ff2d2.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_1f0c9b80435dfd95a9c277a9397ff2d2.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_1f0c9b80435dfd95a9c277a9397ff2d2.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_1f0c9b80435dfd95a9c277a9397ff2d2.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_1f0c9b80435dfd95a9c277a9397ff2d2.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_1f0c9b80435dfd95a9c277a9397ff2d2.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_1f0c9b80435dfd95a9c277a9397ff2d2.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_1f0c9b80435dfd95a9c277a9397ff2d2.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_1f0c9b80435dfd95a9c277a9397ff2d2.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_2fba64923ac90f27fb3e1920bc637cdf": {
+      "ours": {
+        "file": "cases/a_2fba64923ac90f27fb3e1920bc637cdf.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_2fba64923ac90f27fb3e1920bc637cdf.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_2fba64923ac90f27fb3e1920bc637cdf.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_2fba64923ac90f27fb3e1920bc637cdf.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_2fba64923ac90f27fb3e1920bc637cdf.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_2fba64923ac90f27fb3e1920bc637cdf.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_2fba64923ac90f27fb3e1920bc637cdf.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_2fba64923ac90f27fb3e1920bc637cdf.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_2fba64923ac90f27fb3e1920bc637cdf.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_2fba64923ac90f27fb3e1920bc637cdf.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      }
+    },
+    "a_518c4987638d9e0230d4cf477663de69": {
+      "ours": {
+        "file": "cases/a_518c4987638d9e0230d4cf477663de69.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_518c4987638d9e0230d4cf477663de69.js",
+        "steps": 1,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_518c4987638d9e0230d4cf477663de69.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_518c4987638d9e0230d4cf477663de69.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_518c4987638d9e0230d4cf477663de69.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_518c4987638d9e0230d4cf477663de69.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_518c4987638d9e0230d4cf477663de69.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_518c4987638d9e0230d4cf477663de69.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_518c4987638d9e0230d4cf477663de69.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_518c4987638d9e0230d4cf477663de69.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_55f415156da5bfefb79959aec3c20f0f": {
+      "ours": {
+        "file": "cases/a_55f415156da5bfefb79959aec3c20f0f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_55f415156da5bfefb79959aec3c20f0f.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_55f415156da5bfefb79959aec3c20f0f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_55f415156da5bfefb79959aec3c20f0f.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_55f415156da5bfefb79959aec3c20f0f.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_55f415156da5bfefb79959aec3c20f0f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_55f415156da5bfefb79959aec3c20f0f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_55f415156da5bfefb79959aec3c20f0f.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_55f415156da5bfefb79959aec3c20f0f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_55f415156da5bfefb79959aec3c20f0f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_5b20a91a2974d4334dd5c4d262897ca2": {
+      "ours": {
+        "file": "cases/a_5b20a91a2974d4334dd5c4d262897ca2.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_5b20a91a2974d4334dd5c4d262897ca2.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_5b20a91a2974d4334dd5c4d262897ca2.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_5b20a91a2974d4334dd5c4d262897ca2.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_5b20a91a2974d4334dd5c4d262897ca2.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_5b20a91a2974d4334dd5c4d262897ca2.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_5b20a91a2974d4334dd5c4d262897ca2.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_5b20a91a2974d4334dd5c4d262897ca2.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_5b20a91a2974d4334dd5c4d262897ca2.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_5b20a91a2974d4334dd5c4d262897ca2.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      }
+    },
+    "a_6f89a3b81de67476e13bd1d964388efa": {
+      "ours": {
+        "file": "cases/a_6f89a3b81de67476e13bd1d964388efa.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_6f89a3b81de67476e13bd1d964388efa.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_6f89a3b81de67476e13bd1d964388efa.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_6f89a3b81de67476e13bd1d964388efa.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_6f89a3b81de67476e13bd1d964388efa.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_6f89a3b81de67476e13bd1d964388efa.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_6f89a3b81de67476e13bd1d964388efa.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_6f89a3b81de67476e13bd1d964388efa.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_6f89a3b81de67476e13bd1d964388efa.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_6f89a3b81de67476e13bd1d964388efa.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_7bf0b702128172f5fd6f07d9fa92167f": {
+      "ours": {
+        "file": "cases/a_7bf0b702128172f5fd6f07d9fa92167f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_7bf0b702128172f5fd6f07d9fa92167f.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_7bf0b702128172f5fd6f07d9fa92167f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_7bf0b702128172f5fd6f07d9fa92167f.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_7bf0b702128172f5fd6f07d9fa92167f.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_7bf0b702128172f5fd6f07d9fa92167f.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_7bf0b702128172f5fd6f07d9fa92167f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_7bf0b702128172f5fd6f07d9fa92167f.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_7bf0b702128172f5fd6f07d9fa92167f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_7bf0b702128172f5fd6f07d9fa92167f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_ecd24952ffbc544e62e2aba190167534": {
+      "ours": {
+        "file": "cases/a_ecd24952ffbc544e62e2aba190167534.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_ecd24952ffbc544e62e2aba190167534.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_ecd24952ffbc544e62e2aba190167534.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_ecd24952ffbc544e62e2aba190167534.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_ecd24952ffbc544e62e2aba190167534.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_ecd24952ffbc544e62e2aba190167534.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_ecd24952ffbc544e62e2aba190167534.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_ecd24952ffbc544e62e2aba190167534.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_ecd24952ffbc544e62e2aba190167534.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_ecd24952ffbc544e62e2aba190167534.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_ff86f68460c63afce02aa4b0eb6cbcdf": {
+      "ours": {
+        "file": "cases/a_ff86f68460c63afce02aa4b0eb6cbcdf.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_ff86f68460c63afce02aa4b0eb6cbcdf.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_ff86f68460c63afce02aa4b0eb6cbcdf.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_ff86f68460c63afce02aa4b0eb6cbcdf.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_ff86f68460c63afce02aa4b0eb6cbcdf.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_ff86f68460c63afce02aa4b0eb6cbcdf.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_ff86f68460c63afce02aa4b0eb6cbcdf.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_ff86f68460c63afce02aa4b0eb6cbcdf.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_ff86f68460c63afce02aa4b0eb6cbcdf.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_ff86f68460c63afce02aa4b0eb6cbcdf.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      }
+    },
+    "a_f8bc9df06067c552f389ace3c66fa965": {
+      "ours": {
+        "file": "cases/a_f8bc9df06067c552f389ace3c66fa965.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_f8bc9df06067c552f389ace3c66fa965.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_f8bc9df06067c552f389ace3c66fa965.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_f8bc9df06067c552f389ace3c66fa965.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_f8bc9df06067c552f389ace3c66fa965.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_f8bc9df06067c552f389ace3c66fa965.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_f8bc9df06067c552f389ace3c66fa965.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_f8bc9df06067c552f389ace3c66fa965.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_f8bc9df06067c552f389ace3c66fa965.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_f8bc9df06067c552f389ace3c66fa965.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      }
+    },
+    "a_f86635e8f37e30e8910d24002c91bcfe": {
+      "ours": {
+        "file": "cases/a_f86635e8f37e30e8910d24002c91bcfe.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_f86635e8f37e30e8910d24002c91bcfe.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_f86635e8f37e30e8910d24002c91bcfe.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_f86635e8f37e30e8910d24002c91bcfe.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_f86635e8f37e30e8910d24002c91bcfe.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_f86635e8f37e30e8910d24002c91bcfe.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_f86635e8f37e30e8910d24002c91bcfe.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_f86635e8f37e30e8910d24002c91bcfe.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_f86635e8f37e30e8910d24002c91bcfe.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_f86635e8f37e30e8910d24002c91bcfe.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      }
+    },
+    "a_f52e84761cdf2e8bdbacfdfaaf6c86ff": {
+      "ours": {
+        "file": "cases/a_f52e84761cdf2e8bdbacfdfaaf6c86ff.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_f52e84761cdf2e8bdbacfdfaaf6c86ff.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_f52e84761cdf2e8bdbacfdfaaf6c86ff.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_f52e84761cdf2e8bdbacfdfaaf6c86ff.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_f52e84761cdf2e8bdbacfdfaaf6c86ff.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_f52e84761cdf2e8bdbacfdfaaf6c86ff.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_f52e84761cdf2e8bdbacfdfaaf6c86ff.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_f52e84761cdf2e8bdbacfdfaaf6c86ff.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_f52e84761cdf2e8bdbacfdfaaf6c86ff.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_f52e84761cdf2e8bdbacfdfaaf6c86ff.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      }
+    },
+    "a_f2b8c316614797d203088af002a8809b": {
+      "ours": {
+        "file": "cases/a_f2b8c316614797d203088af002a8809b.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_f2b8c316614797d203088af002a8809b.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_f2b8c316614797d203088af002a8809b.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_f2b8c316614797d203088af002a8809b.js",
+        "steps": 11,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_f2b8c316614797d203088af002a8809b.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_f2b8c316614797d203088af002a8809b.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_f2b8c316614797d203088af002a8809b.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_f2b8c316614797d203088af002a8809b.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_f2b8c316614797d203088af002a8809b.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_f2b8c316614797d203088af002a8809b.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      }
+    },
+    "a_5864db9af6ff8358ce0a004567953327": {
+      "ours": {
+        "file": "cases/a_5864db9af6ff8358ce0a004567953327.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_5864db9af6ff8358ce0a004567953327.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_5864db9af6ff8358ce0a004567953327.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_5864db9af6ff8358ce0a004567953327.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_5864db9af6ff8358ce0a004567953327.js",
+        "steps": 17,
+        "task_success": 0,
+        "termination_reason": "action_limit",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_5864db9af6ff8358ce0a004567953327.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_5864db9af6ff8358ce0a004567953327.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_5864db9af6ff8358ce0a004567953327.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_5864db9af6ff8358ce0a004567953327.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_5864db9af6ff8358ce0a004567953327.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      }
+    },
+    "a_7f0b3b6bf9f6d8ed42fa943378ded0a8": {
+      "ours": {
+        "file": "cases/a_7f0b3b6bf9f6d8ed42fa943378ded0a8.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_7f0b3b6bf9f6d8ed42fa943378ded0a8.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_7f0b3b6bf9f6d8ed42fa943378ded0a8.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_7f0b3b6bf9f6d8ed42fa943378ded0a8.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_7f0b3b6bf9f6d8ed42fa943378ded0a8.js",
+        "steps": 17,
+        "task_success": 0,
+        "termination_reason": "action_limit",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_7f0b3b6bf9f6d8ed42fa943378ded0a8.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_7f0b3b6bf9f6d8ed42fa943378ded0a8.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_7f0b3b6bf9f6d8ed42fa943378ded0a8.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_7f0b3b6bf9f6d8ed42fa943378ded0a8.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_7f0b3b6bf9f6d8ed42fa943378ded0a8.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      }
+    },
+    "a_257459dedda57f85247cc342c610bd8c": {
+      "ours": {
+        "file": "cases/a_257459dedda57f85247cc342c610bd8c.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_257459dedda57f85247cc342c610bd8c.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_257459dedda57f85247cc342c610bd8c.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_257459dedda57f85247cc342c610bd8c.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_257459dedda57f85247cc342c610bd8c.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_257459dedda57f85247cc342c610bd8c.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_257459dedda57f85247cc342c610bd8c.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_257459dedda57f85247cc342c610bd8c.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_257459dedda57f85247cc342c610bd8c.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_257459dedda57f85247cc342c610bd8c.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_317ad525f0dd5e78904085fe79b30862": {
+      "ours": {
+        "file": "cases/a_317ad525f0dd5e78904085fe79b30862.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_317ad525f0dd5e78904085fe79b30862.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_317ad525f0dd5e78904085fe79b30862.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_317ad525f0dd5e78904085fe79b30862.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_317ad525f0dd5e78904085fe79b30862.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_317ad525f0dd5e78904085fe79b30862.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_317ad525f0dd5e78904085fe79b30862.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_317ad525f0dd5e78904085fe79b30862.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_317ad525f0dd5e78904085fe79b30862.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_317ad525f0dd5e78904085fe79b30862.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_9ae2b9749e7ea991e53d436cc6803856": {
+      "ours": {
+        "file": "cases/a_9ae2b9749e7ea991e53d436cc6803856.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_9ae2b9749e7ea991e53d436cc6803856.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_9ae2b9749e7ea991e53d436cc6803856.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_9ae2b9749e7ea991e53d436cc6803856.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_9ae2b9749e7ea991e53d436cc6803856.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_9ae2b9749e7ea991e53d436cc6803856.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_9ae2b9749e7ea991e53d436cc6803856.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_9ae2b9749e7ea991e53d436cc6803856.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_9ae2b9749e7ea991e53d436cc6803856.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_9ae2b9749e7ea991e53d436cc6803856.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_22caab6d4e4aa25adc8a4563f6bbe56e": {
+      "ours": {
+        "file": "cases/a_22caab6d4e4aa25adc8a4563f6bbe56e.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6.0,
+        "observed_images": 6
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_22caab6d4e4aa25adc8a4563f6bbe56e.js",
+        "steps": 7,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_22caab6d4e4aa25adc8a4563f6bbe56e.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 5
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_22caab6d4e4aa25adc8a4563f6bbe56e.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_22caab6d4e4aa25adc8a4563f6bbe56e.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 2
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_22caab6d4e4aa25adc8a4563f6bbe56e.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "claude55": {
+        "file": "runs/claude55/a_22caab6d4e4aa25adc8a4563f6bbe56e.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 2
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_22caab6d4e4aa25adc8a4563f6bbe56e.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 6
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_22caab6d4e4aa25adc8a4563f6bbe56e.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 2
+      },
+      "grok47": {
+        "file": "runs/grok47/a_22caab6d4e4aa25adc8a4563f6bbe56e.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      }
+    },
+    "a_ffbe0bb8ba1aac31699d611f3d9700ad": {
+      "ours": {
+        "file": "cases/a_ffbe0bb8ba1aac31699d611f3d9700ad.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6.0,
+        "observed_images": 6
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_ffbe0bb8ba1aac31699d611f3d9700ad.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_ffbe0bb8ba1aac31699d611f3d9700ad.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 8,
+        "observed_images": 8
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_ffbe0bb8ba1aac31699d611f3d9700ad.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 2
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_ffbe0bb8ba1aac31699d611f3d9700ad.js",
+        "steps": 17,
+        "task_success": 0,
+        "termination_reason": "abandoned_without_report",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_ffbe0bb8ba1aac31699d611f3d9700ad.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "claude55": {
+        "file": "runs/claude55/a_ffbe0bb8ba1aac31699d611f3d9700ad.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 2
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_ffbe0bb8ba1aac31699d611f3d9700ad.js",
+        "steps": 8,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 7,
+        "observed_images": 7
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_ffbe0bb8ba1aac31699d611f3d9700ad.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 2
+      },
+      "grok47": {
+        "file": "runs/grok47/a_ffbe0bb8ba1aac31699d611f3d9700ad.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      }
+    },
+    "a_fb46685ec205529fb3e2fdb847d3feff": {
+      "ours": {
+        "file": "cases/a_fb46685ec205529fb3e2fdb847d3feff.js",
+        "steps": 8,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 7.0,
+        "observed_images": 7
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_fb46685ec205529fb3e2fdb847d3feff.js",
+        "steps": 10,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 8,
+        "observed_images": 8
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_fb46685ec205529fb3e2fdb847d3feff.js",
+        "steps": 9,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 8,
+        "observed_images": 8
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_fb46685ec205529fb3e2fdb847d3feff.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 2
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_fb46685ec205529fb3e2fdb847d3feff.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 2
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_fb46685ec205529fb3e2fdb847d3feff.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "claude55": {
+        "file": "runs/claude55/a_fb46685ec205529fb3e2fdb847d3feff.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 2
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_fb46685ec205529fb3e2fdb847d3feff.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 8,
+        "observed_images": 8
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_fb46685ec205529fb3e2fdb847d3feff.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 2
+      },
+      "grok47": {
+        "file": "runs/grok47/a_fb46685ec205529fb3e2fdb847d3feff.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 5
+      }
+    },
+    "a_f9249b8f0896cc20dc854381749ffafb": {
+      "ours": {
+        "file": "cases/a_f9249b8f0896cc20dc854381749ffafb.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2.0,
+        "observed_images": 1
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_f9249b8f0896cc20dc854381749ffafb.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_f9249b8f0896cc20dc854381749ffafb.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 1
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_f9249b8f0896cc20dc854381749ffafb.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_f9249b8f0896cc20dc854381749ffafb.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_f9249b8f0896cc20dc854381749ffafb.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "claude55": {
+        "file": "runs/claude55/a_f9249b8f0896cc20dc854381749ffafb.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_f9249b8f0896cc20dc854381749ffafb.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_f9249b8f0896cc20dc854381749ffafb.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_f9249b8f0896cc20dc854381749ffafb.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      }
+    },
+    "a_487fe69c8344d8939ad7b7d5a91b4722": {
+      "ours": {
+        "file": "cases/a_487fe69c8344d8939ad7b7d5a91b4722.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_487fe69c8344d8939ad7b7d5a91b4722.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_487fe69c8344d8939ad7b7d5a91b4722.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_487fe69c8344d8939ad7b7d5a91b4722.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_487fe69c8344d8939ad7b7d5a91b4722.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_487fe69c8344d8939ad7b7d5a91b4722.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_487fe69c8344d8939ad7b7d5a91b4722.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_487fe69c8344d8939ad7b7d5a91b4722.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_487fe69c8344d8939ad7b7d5a91b4722.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_487fe69c8344d8939ad7b7d5a91b4722.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      }
+    },
+    "a_126b4657e3bfd4a71e7b7421d53cc672": {
+      "ours": {
+        "file": "cases/a_126b4657e3bfd4a71e7b7421d53cc672.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_126b4657e3bfd4a71e7b7421d53cc672.js",
+        "steps": 8,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_126b4657e3bfd4a71e7b7421d53cc672.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 2
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_126b4657e3bfd4a71e7b7421d53cc672.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_126b4657e3bfd4a71e7b7421d53cc672.js",
+        "steps": 10,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_126b4657e3bfd4a71e7b7421d53cc672.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_126b4657e3bfd4a71e7b7421d53cc672.js",
+        "steps": 1,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_126b4657e3bfd4a71e7b7421d53cc672.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_126b4657e3bfd4a71e7b7421d53cc672.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_126b4657e3bfd4a71e7b7421d53cc672.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      }
+    },
+    "a_2051a681a956d86dfdaf5e8326c6b23b": {
+      "ours": {
+        "file": "cases/a_2051a681a956d86dfdaf5e8326c6b23b.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_2051a681a956d86dfdaf5e8326c6b23b.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_2051a681a956d86dfdaf5e8326c6b23b.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_2051a681a956d86dfdaf5e8326c6b23b.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_2051a681a956d86dfdaf5e8326c6b23b.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_2051a681a956d86dfdaf5e8326c6b23b.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_2051a681a956d86dfdaf5e8326c6b23b.js",
+        "steps": 1,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_2051a681a956d86dfdaf5e8326c6b23b.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_2051a681a956d86dfdaf5e8326c6b23b.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_2051a681a956d86dfdaf5e8326c6b23b.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      }
+    },
+    "a_73b8fe4d012f884ad1404396fc37b7fa": {
+      "ours": {
+        "file": "cases/a_73b8fe4d012f884ad1404396fc37b7fa.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_73b8fe4d012f884ad1404396fc37b7fa.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_73b8fe4d012f884ad1404396fc37b7fa.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_73b8fe4d012f884ad1404396fc37b7fa.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_73b8fe4d012f884ad1404396fc37b7fa.js",
+        "steps": 8,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_73b8fe4d012f884ad1404396fc37b7fa.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_73b8fe4d012f884ad1404396fc37b7fa.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_73b8fe4d012f884ad1404396fc37b7fa.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_73b8fe4d012f884ad1404396fc37b7fa.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_73b8fe4d012f884ad1404396fc37b7fa.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      }
+    },
+    "a_7dc7cef916957b389cf86c479a469050": {
+      "ours": {
+        "file": "cases/a_7dc7cef916957b389cf86c479a469050.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 2
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_7dc7cef916957b389cf86c479a469050.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 2
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_7dc7cef916957b389cf86c479a469050.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 2
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_7dc7cef916957b389cf86c479a469050.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_7dc7cef916957b389cf86c479a469050.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_7dc7cef916957b389cf86c479a469050.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_7dc7cef916957b389cf86c479a469050.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 2
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_7dc7cef916957b389cf86c479a469050.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_7dc7cef916957b389cf86c479a469050.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_7dc7cef916957b389cf86c479a469050.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 2
+      }
+    },
+    "a_5c149640727f826b3172745c0c78d0a4": {
+      "ours": {
+        "file": "cases/a_5c149640727f826b3172745c0c78d0a4.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 1
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_5c149640727f826b3172745c0c78d0a4.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_5c149640727f826b3172745c0c78d0a4.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_5c149640727f826b3172745c0c78d0a4.js",
+        "steps": 17,
+        "task_success": 0,
+        "termination_reason": "action_limit",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_5c149640727f826b3172745c0c78d0a4.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_5c149640727f826b3172745c0c78d0a4.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "claude55": {
+        "file": "runs/claude55/a_5c149640727f826b3172745c0c78d0a4.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_5c149640727f826b3172745c0c78d0a4.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_5c149640727f826b3172745c0c78d0a4.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_5c149640727f826b3172745c0c78d0a4.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 1
+      }
+    },
+    "a_8d9602170b723f0a0dd8a543c65e5daa": {
+      "ours": {
+        "file": "cases/a_8d9602170b723f0a0dd8a543c65e5daa.js",
+        "steps": 8,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 7.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_8d9602170b723f0a0dd8a543c65e5daa.js",
+        "steps": 8,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 3
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_8d9602170b723f0a0dd8a543c65e5daa.js",
+        "steps": 12,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 11,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_8d9602170b723f0a0dd8a543c65e5daa.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_8d9602170b723f0a0dd8a543c65e5daa.js",
+        "steps": 17,
+        "task_success": 0,
+        "termination_reason": "abandoned_without_report",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_8d9602170b723f0a0dd8a543c65e5daa.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "claude55": {
+        "file": "runs/claude55/a_8d9602170b723f0a0dd8a543c65e5daa.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_8d9602170b723f0a0dd8a543c65e5daa.js",
+        "steps": 7,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_8d9602170b723f0a0dd8a543c65e5daa.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "grok47": {
+        "file": "runs/grok47/a_8d9602170b723f0a0dd8a543c65e5daa.js",
+        "steps": 10,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 9,
+        "observed_images": 3
+      }
+    },
+    "a_6a416a28a3ff913abbb794c082700eef": {
+      "ours": {
+        "file": "cases/a_6a416a28a3ff913abbb794c082700eef.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_6a416a28a3ff913abbb794c082700eef.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_6a416a28a3ff913abbb794c082700eef.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_6a416a28a3ff913abbb794c082700eef.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_6a416a28a3ff913abbb794c082700eef.js",
+        "steps": 17,
+        "task_success": 0,
+        "termination_reason": "action_limit",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_6a416a28a3ff913abbb794c082700eef.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_6a416a28a3ff913abbb794c082700eef.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_6a416a28a3ff913abbb794c082700eef.js",
+        "steps": 1,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_6a416a28a3ff913abbb794c082700eef.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_6a416a28a3ff913abbb794c082700eef.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      }
+    },
+    "a_7499977c203b77896ff397e4fb8ca4f6": {
+      "ours": {
+        "file": "cases/a_7499977c203b77896ff397e4fb8ca4f6.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_7499977c203b77896ff397e4fb8ca4f6.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_7499977c203b77896ff397e4fb8ca4f6.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_7499977c203b77896ff397e4fb8ca4f6.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_7499977c203b77896ff397e4fb8ca4f6.js",
+        "steps": 17,
+        "task_success": 0,
+        "termination_reason": "abandoned_without_report",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_7499977c203b77896ff397e4fb8ca4f6.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      },
+      "claude55": {
+        "file": "runs/claude55/a_7499977c203b77896ff397e4fb8ca4f6.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_7499977c203b77896ff397e4fb8ca4f6.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_7499977c203b77896ff397e4fb8ca4f6.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      },
+      "grok47": {
+        "file": "runs/grok47/a_7499977c203b77896ff397e4fb8ca4f6.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      }
+    },
+    "a_b3d274a579c03a8c5b34214f7b888791": {
+      "ours": {
+        "file": "cases/a_b3d274a579c03a8c5b34214f7b888791.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6.0,
+        "observed_images": 2
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_b3d274a579c03a8c5b34214f7b888791.js",
+        "steps": 9,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_b3d274a579c03a8c5b34214f7b888791.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 8,
+        "observed_images": 2
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_b3d274a579c03a8c5b34214f7b888791.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 2
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_b3d274a579c03a8c5b34214f7b888791.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_b3d274a579c03a8c5b34214f7b888791.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 2
+      },
+      "claude55": {
+        "file": "runs/claude55/a_b3d274a579c03a8c5b34214f7b888791.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 2
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_b3d274a579c03a8c5b34214f7b888791.js",
+        "steps": 8,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 2
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_b3d274a579c03a8c5b34214f7b888791.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 2
+      },
+      "grok47": {
+        "file": "runs/grok47/a_b3d274a579c03a8c5b34214f7b888791.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 2
+      }
+    },
+    "a_6186d03f378159faac8152f5e246f46e": {
+      "ours": {
+        "file": "cases/a_6186d03f378159faac8152f5e246f46e.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 8.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_6186d03f378159faac8152f5e246f46e.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_6186d03f378159faac8152f5e246f46e.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_6186d03f378159faac8152f5e246f46e.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_6186d03f378159faac8152f5e246f46e.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_6186d03f378159faac8152f5e246f46e.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      },
+      "claude55": {
+        "file": "runs/claude55/a_6186d03f378159faac8152f5e246f46e.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_6186d03f378159faac8152f5e246f46e.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_6186d03f378159faac8152f5e246f46e.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 3
+      },
+      "grok47": {
+        "file": "runs/grok47/a_6186d03f378159faac8152f5e246f46e.js",
+        "steps": 8,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 7,
+        "observed_images": 3
+      }
+    },
+    "a_1e4c9cd098589a1df4a7a218ef73c3e6": {
+      "ours": {
+        "file": "cases/a_1e4c9cd098589a1df4a7a218ef73c3e6.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_1e4c9cd098589a1df4a7a218ef73c3e6.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_1e4c9cd098589a1df4a7a218ef73c3e6.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_1e4c9cd098589a1df4a7a218ef73c3e6.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_1e4c9cd098589a1df4a7a218ef73c3e6.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_1e4c9cd098589a1df4a7a218ef73c3e6.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "claude55": {
+        "file": "runs/claude55/a_1e4c9cd098589a1df4a7a218ef73c3e6.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_1e4c9cd098589a1df4a7a218ef73c3e6.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_1e4c9cd098589a1df4a7a218ef73c3e6.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "grok47": {
+        "file": "runs/grok47/a_1e4c9cd098589a1df4a7a218ef73c3e6.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      }
+    },
+    "a_cac41a39f1c89f13713192b2b342d882": {
+      "ours": {
+        "file": "cases/a_cac41a39f1c89f13713192b2b342d882.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2.0,
+        "observed_images": 1
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_cac41a39f1c89f13713192b2b342d882.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_cac41a39f1c89f13713192b2b342d882.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 8,
+        "observed_images": 1
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_cac41a39f1c89f13713192b2b342d882.js",
+        "steps": 7,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 1
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_cac41a39f1c89f13713192b2b342d882.js",
+        "steps": 17,
+        "task_success": 0,
+        "termination_reason": "action_limit",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_cac41a39f1c89f13713192b2b342d882.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 1
+      },
+      "claude55": {
+        "file": "runs/claude55/a_cac41a39f1c89f13713192b2b342d882.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_cac41a39f1c89f13713192b2b342d882.js",
+        "steps": 8,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 1
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_cac41a39f1c89f13713192b2b342d882.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_cac41a39f1c89f13713192b2b342d882.js",
+        "steps": 9,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 8,
+        "observed_images": 1
+      }
+    },
+    "a_b04f0091053306a1e75c41ec26b394a6": {
+      "ours": {
+        "file": "cases/a_b04f0091053306a1e75c41ec26b394a6.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4.0,
+        "observed_images": 1
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_b04f0091053306a1e75c41ec26b394a6.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_b04f0091053306a1e75c41ec26b394a6.js",
+        "steps": 10,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 9,
+        "observed_images": 1
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_b04f0091053306a1e75c41ec26b394a6.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_b04f0091053306a1e75c41ec26b394a6.js",
+        "steps": 2,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_b04f0091053306a1e75c41ec26b394a6.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "claude55": {
+        "file": "runs/claude55/a_b04f0091053306a1e75c41ec26b394a6.js",
+        "steps": 2,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 1
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_b04f0091053306a1e75c41ec26b394a6.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_b04f0091053306a1e75c41ec26b394a6.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_b04f0091053306a1e75c41ec26b394a6.js",
+        "steps": 10,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 9,
+        "observed_images": 1
+      }
+    },
+    "a_5d0df1e9d7fa7fc696ecbb80f69892b7": {
+      "ours": {
+        "file": "cases/a_5d0df1e9d7fa7fc696ecbb80f69892b7.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2.0,
+        "observed_images": 1
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_5d0df1e9d7fa7fc696ecbb80f69892b7.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 1
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_5d0df1e9d7fa7fc696ecbb80f69892b7.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 1
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_5d0df1e9d7fa7fc696ecbb80f69892b7.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_5d0df1e9d7fa7fc696ecbb80f69892b7.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_5d0df1e9d7fa7fc696ecbb80f69892b7.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "claude55": {
+        "file": "runs/claude55/a_5d0df1e9d7fa7fc696ecbb80f69892b7.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_5d0df1e9d7fa7fc696ecbb80f69892b7.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 1
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_5d0df1e9d7fa7fc696ecbb80f69892b7.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_5d0df1e9d7fa7fc696ecbb80f69892b7.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      }
+    },
+    "a_2582fdfb89177cbb5de5634c8ce38037": {
+      "ours": {
+        "file": "cases/a_2582fdfb89177cbb5de5634c8ce38037.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2.0,
+        "observed_images": 1
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_2582fdfb89177cbb5de5634c8ce38037.js",
+        "steps": 7,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 1
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_2582fdfb89177cbb5de5634c8ce38037.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_2582fdfb89177cbb5de5634c8ce38037.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_2582fdfb89177cbb5de5634c8ce38037.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_2582fdfb89177cbb5de5634c8ce38037.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "claude55": {
+        "file": "runs/claude55/a_2582fdfb89177cbb5de5634c8ce38037.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_2582fdfb89177cbb5de5634c8ce38037.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 1
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_2582fdfb89177cbb5de5634c8ce38037.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      },
+      "grok47": {
+        "file": "runs/grok47/a_2582fdfb89177cbb5de5634c8ce38037.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 1
+      }
+    },
+    "a_01576a2300a05aa3378778a874a2d20f": {
+      "ours": {
+        "file": "cases/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 1
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "muse": {
+        "file": "runs/muse/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_01576a2300a05aa3378778a874a2d20f.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 1
+      }
+    },
+    "a_4b46a0a3ae11cbd0071d3b872e844b42": {
+      "ours": {
+        "file": "cases/a_4b46a0a3ae11cbd0071d3b872e844b42.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_4b46a0a3ae11cbd0071d3b872e844b42.js",
+        "steps": 9,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_4b46a0a3ae11cbd0071d3b872e844b42.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_4b46a0a3ae11cbd0071d3b872e844b42.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_4b46a0a3ae11cbd0071d3b872e844b42.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_4b46a0a3ae11cbd0071d3b872e844b42.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_4b46a0a3ae11cbd0071d3b872e844b42.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_4b46a0a3ae11cbd0071d3b872e844b42.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_4b46a0a3ae11cbd0071d3b872e844b42.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_4b46a0a3ae11cbd0071d3b872e844b42.js",
+        "steps": 8,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 1
+      }
+    },
+    "a_d7a62fb22991ec1084ed9b086a03011c": {
+      "ours": {
+        "file": "cases/a_d7a62fb22991ec1084ed9b086a03011c.js",
+        "steps": 10,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_d7a62fb22991ec1084ed9b086a03011c.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_d7a62fb22991ec1084ed9b086a03011c.js",
+        "steps": 11,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 7,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_d7a62fb22991ec1084ed9b086a03011c.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_d7a62fb22991ec1084ed9b086a03011c.js",
+        "steps": 9,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_d7a62fb22991ec1084ed9b086a03011c.js",
+        "steps": 9,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "claude55": {
+        "file": "runs/claude55/a_d7a62fb22991ec1084ed9b086a03011c.js",
+        "steps": 5,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_d7a62fb22991ec1084ed9b086a03011c.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_d7a62fb22991ec1084ed9b086a03011c.js",
+        "steps": 8,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "grok47": {
+        "file": "runs/grok47/a_d7a62fb22991ec1084ed9b086a03011c.js",
+        "steps": 9,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 3
+      }
+    },
+    "a_7ab41bacfee9f813e13601b24f279c00": {
+      "ours": {
+        "file": "cases/a_7ab41bacfee9f813e13601b24f279c00.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_7ab41bacfee9f813e13601b24f279c00.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_7ab41bacfee9f813e13601b24f279c00.js",
+        "steps": 10,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_7ab41bacfee9f813e13601b24f279c00.js",
+        "steps": 5,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_7ab41bacfee9f813e13601b24f279c00.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_7ab41bacfee9f813e13601b24f279c00.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_7ab41bacfee9f813e13601b24f279c00.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_7ab41bacfee9f813e13601b24f279c00.js",
+        "steps": 3,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_7ab41bacfee9f813e13601b24f279c00.js",
+        "steps": 8,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      },
+      "grok47": {
+        "file": "runs/grok47/a_7ab41bacfee9f813e13601b24f279c00.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 1
+      }
+    },
+    "a_e102920a4eab7a2f397132d8af469338": {
+      "ours": {
+        "file": "cases/a_e102920a4eab7a2f397132d8af469338.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_e102920a4eab7a2f397132d8af469338.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_e102920a4eab7a2f397132d8af469338.js",
+        "steps": 8,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_e102920a4eab7a2f397132d8af469338.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_e102920a4eab7a2f397132d8af469338.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 3
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_e102920a4eab7a2f397132d8af469338.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_e102920a4eab7a2f397132d8af469338.js",
+        "steps": 4,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_e102920a4eab7a2f397132d8af469338.js",
+        "steps": 3,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_e102920a4eab7a2f397132d8af469338.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 3
+      },
+      "grok47": {
+        "file": "runs/grok47/a_e102920a4eab7a2f397132d8af469338.js",
+        "steps": 8,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 3
+      }
+    },
+    "a_555d2a42e919d0ed850857661949440a": {
+      "ours": {
+        "file": "cases/a_555d2a42e919d0ed850857661949440a.js",
+        "steps": 12,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 8.0,
+        "observed_images": 3
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_555d2a42e919d0ed850857661949440a.js",
+        "steps": 8,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 1,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_555d2a42e919d0ed850857661949440a.js",
+        "steps": 12,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 8,
+        "observed_images": 3
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_555d2a42e919d0ed850857661949440a.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_555d2a42e919d0ed850857661949440a.js",
+        "steps": 14,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 7,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_555d2a42e919d0ed850857661949440a.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_555d2a42e919d0ed850857661949440a.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_555d2a42e919d0ed850857661949440a.js",
+        "steps": 12,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 7,
+        "observed_images": 2
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_555d2a42e919d0ed850857661949440a.js",
+        "steps": 8,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 5,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_555d2a42e919d0ed850857661949440a.js",
+        "steps": 12,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 9,
+        "observed_images": 3
+      }
+    },
+    "a_73e5e18b82be17aa68fb32b03ec95493": {
+      "ours": {
+        "file": "cases/a_73e5e18b82be17aa68fb32b03ec95493.js",
+        "steps": 10,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_73e5e18b82be17aa68fb32b03ec95493.js",
+        "steps": 4,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_73e5e18b82be17aa68fb32b03ec95493.js",
+        "steps": 7,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_73e5e18b82be17aa68fb32b03ec95493.js",
+        "steps": 13,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_73e5e18b82be17aa68fb32b03ec95493.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_73e5e18b82be17aa68fb32b03ec95493.js",
+        "steps": 7,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_73e5e18b82be17aa68fb32b03ec95493.js",
+        "steps": 9,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 6,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_73e5e18b82be17aa68fb32b03ec95493.js",
+        "steps": 8,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_73e5e18b82be17aa68fb32b03ec95493.js",
+        "steps": 7,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 4,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_73e5e18b82be17aa68fb32b03ec95493.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_427684e09a8f5d1632acb37824f3ecbb": {
+      "ours": {
+        "file": "cases/a_427684e09a8f5d1632acb37824f3ecbb.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_427684e09a8f5d1632acb37824f3ecbb.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_427684e09a8f5d1632acb37824f3ecbb.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_427684e09a8f5d1632acb37824f3ecbb.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_427684e09a8f5d1632acb37824f3ecbb.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_427684e09a8f5d1632acb37824f3ecbb.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_427684e09a8f5d1632acb37824f3ecbb.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_427684e09a8f5d1632acb37824f3ecbb.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_427684e09a8f5d1632acb37824f3ecbb.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_427684e09a8f5d1632acb37824f3ecbb.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_7a8d557c1c666a3789ccdbb6f8b05d4d": {
+      "ours": {
+        "file": "cases/a_7a8d557c1c666a3789ccdbb6f8b05d4d.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_7a8d557c1c666a3789ccdbb6f8b05d4d.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_7a8d557c1c666a3789ccdbb6f8b05d4d.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_7a8d557c1c666a3789ccdbb6f8b05d4d.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_7a8d557c1c666a3789ccdbb6f8b05d4d.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_7a8d557c1c666a3789ccdbb6f8b05d4d.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_7a8d557c1c666a3789ccdbb6f8b05d4d.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_7a8d557c1c666a3789ccdbb6f8b05d4d.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_7a8d557c1c666a3789ccdbb6f8b05d4d.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_7a8d557c1c666a3789ccdbb6f8b05d4d.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    },
+    "a_ff028bb42f5314a4fd559b1f43133c87": {
+      "ours": {
+        "file": "cases/a_ff028bb42f5314a4fd559b1f43133c87.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3.0,
+        "observed_images": 0
+      },
+      "qwen9b": {
+        "file": "runs/qwen9b/a_ff028bb42f5314a4fd559b1f43133c87.js",
+        "steps": 7,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "kimi26": {
+        "file": "runs/kimi26/a_ff028bb42f5314a4fd559b1f43133c87.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "qwen27b": {
+        "file": "runs/qwen27b/a_ff028bb42f5314a4fd559b1f43133c87.js",
+        "steps": 6,
+        "task_success": 0,
+        "termination_reason": "submitted",
+        "cost": 2,
+        "observed_images": 0
+      },
+      "qwen9b-json": {
+        "file": "runs/qwen9b-json/a_ff028bb42f5314a4fd559b1f43133c87.js",
+        "steps": 17,
+        "task_success": 0,
+        "termination_reason": "action_limit",
+        "cost": 0,
+        "observed_images": 0
+      },
+      "gemma4": {
+        "file": "runs/gemma4/a_ff028bb42f5314a4fd559b1f43133c87.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "claude55": {
+        "file": "runs/claude55/a_ff028bb42f5314a4fd559b1f43133c87.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt54": {
+        "file": "runs/gpt54/a_ff028bb42f5314a4fd559b1f43133c87.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "gpt6astra": {
+        "file": "runs/gpt6astra/a_ff028bb42f5314a4fd559b1f43133c87.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      },
+      "grok47": {
+        "file": "runs/grok47/a_ff028bb42f5314a4fd559b1f43133c87.js",
+        "steps": 6,
+        "task_success": 1,
+        "termination_reason": "submitted",
+        "cost": 3,
+        "observed_images": 0
+      }
+    }
+  },
+  "comparison_notice": "Fixed curated cases; model protocols differ. This gallery is not a representative model ranking. Ours is the default; no model outputs or saved scores are changed."
 }

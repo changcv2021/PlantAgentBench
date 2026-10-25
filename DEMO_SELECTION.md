@@ -58,3 +58,7 @@
 P1 is unchanged and remains record-based. Images not opened by the model are labelled in the visitor gallery. All previously exposed IDs are retained in the exposure ledger. Source-specific restrictions, including Eschikon non-commercial use, are listed in DATA_TERMS.md.
 
 All five added P2 runs used QUERY → QUERY → SUBMIT, with no INSPECT action. Their 15 archived images were available to request but not observed by the model. These demonstrate an image-bearing task configuration and the agent’s actual record-query policy, not successful visual reasoning.
+
+## Multi-model recordings
+
+The v5 viewer retains these exact 50 case IDs and the original Ours recordings. Additional models are matched by episode ID and verified frozen Episode/Gold identity, without selection by their scores. Each replay preserves its own recorded outcome and observation history. Model availability and paths are listed in `demo_manifest.json`. Protocols differ; this curated gallery is not a performance leaderboard.
