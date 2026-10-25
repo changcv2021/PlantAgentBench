@@ -2,7 +2,7 @@
 
 [打开网页](https://changcv2021.github.io/PlantAgentBench/)
 
-本页展示 **50 道固定案例、11 种模型配置的 501 条已有轨迹**，P1–P5 各 10 道。可在同一道题上自由切换模型：绿色为 **Ours · Qwen3.5-9B**，蓝色为开放权重模型，紫色为闭源模型。Ours 的基础模型为 Qwen3.5-9B，使用 Kimi2.6 轨迹 SFT，检查点为 `export-844`。
+本页展示 **50 道固定案例、11 种模型配置的 501 条已有轨迹**，P1–P5 各 10 道。可在同一道题上自由切换模型：绿色为 **Ours · Qwen3.5-9B (Thinking)**，蓝色为开放权重模型，暖棕色为闭源模型。Ours 的基础模型为 Qwen3.5-9B，使用 Kimi2.6 轨迹 SFT，检查点为 `export-844`。
 
 Ours、Qwen3.5-9B 原生工具调用版、Qwen3.5-9B JSON 版、Qwen3.5-27B、Kimi2.6、Gemma4-31B、Claude Opus 5.5、GPT-5.4、GPT-6-Astra 和 Grok 4.7 均有 50 条对应记录。Muse Glimmer 30B 只有 1/50，其余明确标为没有可用回放。这是当前演示案例的覆盖数，不代表完整 Benchmark 的完成进度。
 
@@ -35,6 +35,6 @@ Eschikon 材料仅按来源的非商业使用声明用于本科研演示，保�
 
 - **Qwen3.5-9B**：全量 JSON 动作运行，thinking 关闭，单次输出上限 4,096 tokens。
 - **Qwen3.5-9B (Thinking)**：Core-3K 原生工具调用运行，thinking 开启，单次输出上限 32,768 tokens。
-- **Ours · Qwen3.5-9B**：基于 Qwen3.5-9B 的 thinking 模式，以 Kimi2.6 轨迹进行 SFT。
+- **Ours · Qwen3.5-9B (Thinking)**：基于 Qwen3.5-9B 的 thinking 模式，以 Kimi2.6 轨迹进行 SFT。
 
 两种基线还具有不同的采样配置，不能将差异单独归因于 thinking。模型按钮上的 50/50 等覆盖数已去掉。[MODEL_COVERAGE.md](MODEL_COVERAGE.md) 保留全量运行进度检查点与当前 50 道题的真实回放覆盖核查，集成测试不替代正式任务结果。原始轨迹、答案和评分不变。

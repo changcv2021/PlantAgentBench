@@ -4,8 +4,8 @@
  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="description" content="Explore how open-weight, closed-source and our fine-tuned plant agents investigate the same 50 PlantAgentBench cases. Switch models and replay original actions and evidence.">
  <meta name="theme-color" content="#fafafa"><title>PlantAgentBench · Agent demonstrations</title>
- <link rel="icon" href="leaf.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css?v=models6">
- <script src="data.js?v=models6" defer></script><script src="app.js?v=models6" defer></script>
+ <link rel="icon" href="leaf.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css?v=models7">
+ <script src="data.js?v=models7" defer></script><script src="app.js?v=models7" defer></script>
 </head>
 <body>
 <a class="skip" href="#explorer">Skip to demonstrations</a>
@@ -13,7 +13,7 @@
 <main>
  <section class="intro" aria-labelledby="page-title">
   <div><p class="eyebrow">RECORDED AGENT DEMONSTRATIONS</p><h1 id="page-title">Plant tasks, step by step.</h1><p class="intro-copy">Follow the evidence an agent requests, the feedback it receives, and the decision it makes.</p></div>
-  <div class="model-label"><strong>Ours · Qwen3.5-9B</strong><span>Base: Qwen3.5-9B (Thinking) · Kimi2.6 SFT</span><span>50 shared cases · 5 task families</span></div>
+  <div class="model-label"><strong>Ours · Qwen3.5-9B (Thinking)</strong><span>Base: Qwen3.5-9B (Thinking) · Kimi2.6 SFT</span><span>50 shared cases · 5 task families</span></div>
  </section>
  <section id="explorer" class="explorer" aria-labelledby="explorer-title">
   <div class="explorer-heading"><h2 id="explorer-title">Explore the runs</h2><span>One case. Different agents. Their actual decisions.</span></div>
@@ -35,7 +35,7 @@
  </section>
  <section class="about" id="about" aria-labelledby="about-title">
   <h2 id="about-title">About these demonstrations</h2>
-  <p>Ten shared cases per task. Switch models while keeping the same case, then step through the actions each agent actually took. Green marks Ours, blue marks open-weight models, and purple marks closed-source models. Both successes and failures are preserved. This curated gallery is not a representative performance sample or a model leaderboard.</p>
+  <p>Ten shared cases per task. Switch models while keeping the same case, then step through the actions each agent actually took. Green marks Ours, blue marks open-weight models, and warm brown marks closed-source models. Both successes and failures are preserved. This curated gallery is not a representative performance sample or a model leaderboard.</p>
   <details><summary>Model coverage: full runs and these 50 cases</summary><div><p>Full-catalog completion and demo availability are different. Full-run progress comes from saved checkpoints; availability for these 50 cases is checked directly in the result databases. Integration tests are listed separately. The full catalog includes 318,760 Agent episodes and 5,830 component tasks.</p><div class="coverage-table" id="model-coverage"></div><p class="coverage-note">A model appears in the replay picker only when it has at least one matching formal recording. <a href="https://github.com/changcv2021/PlantAgentBench/blob/main/MODEL_COVERAGE.md">Coverage details ↗</a></p></div></details>
   <details><summary>Selection, provenance and data credits</summary><div><p>Ours is based on Qwen3.5-9B in thinking mode, fine-tuned on Kimi2.6 trajectories (checkpoint export-844). The same 50 cases remain fixed across models. Original model outputs, tool calls, returned evidence and saved evaluation outcomes are retained. Unavailable recordings are explicitly labelled; no other model's trace is substituted.</p><p>Run configurations differ: Qwen3.5-9B (Thinking) uses native tool calls with thinking enabled; Qwen3.5-9B uses JSON actions with thinking disabled. Ours uses the thinking base. These runs also differ in output limits and sampling settings, so this is not an isolated test of thinking mode. Recorded reasoning is shown only when the service actually returned it. Cross-model replays illustrate behavior, not a controlled performance comparison.</p><p>P1 remains record-based. Five P2 cases have archived images; Ours queried records without inspecting those images. Every model's gallery independently labels what that model saw. No inference or rescoring was performed for this release. Private reference answers and model weights are not included.</p><p><a href="https://github.com/changcv2021/PlantAgentBench/blob/main/demo_manifest.json">Case manifest ↗</a> · <a href="https://github.com/changcv2021/PlantAgentBench/blob/main/DATA_TERMS.md">Source credits & data terms ↗</a></p></div></details>
   <p class="future-note"><strong>Planned model release.</strong> A future Hugging Face GPU demo will focus on P3 diagnosis and P4 care with uploaded photos. Live uploads and inference are not available yet.</p>

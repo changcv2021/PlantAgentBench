@@ -60,7 +60,7 @@ async function loadCase(id,step=0){
  const run=entry.runs[modelId];const requestedModel=modelId;const key=modelId==='ours'?id:modelId+'::'+id;
  if(!run){active=null;position=0;viewer.dataset.case=id;viewer.dataset.model=modelId;viewer.dataset.step='0';viewer.replaceChildren(add(el('div','unavailable'),el('span','model-tag '+model().group,model().name),el('h3','',entry.title),el('p','','No completed recording is available for this model on this case.'),el('p','small','Choose another case or model. A missing recording is not counted as a failed task.')));updateURL();return;}
  try{
-  if(!window.PAB_CASES?.[key])await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=run.file+'?v=models6';script.onload=()=>{script.remove();resolve();};script.onerror=()=>{script.remove();reject(new Error('Unable to load this recording. Please reload.'));};document.head.append(script);});
+  if(!window.PAB_CASES?.[key])await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=run.file+'?v=models7';script.onload=()=>{script.remove();resolve();};script.onerror=()=>{script.remove();reject(new Error('Unable to load this recording. Please reload.'));};document.head.append(script);});
   if(version!==loadVersion||requestedModel!==modelId)return;active=window.PAB_CASES[key];if(!active)throw new Error('This recording did not load. Please reload.');position=Math.max(0,Math.min(step,active.steps.length));render();updateURL();
  }catch(e){if(version===loadVersion)viewer.replaceChildren(el('p','loading',e.message));}
 }

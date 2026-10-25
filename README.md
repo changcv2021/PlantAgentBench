@@ -4,7 +4,7 @@
 
 [Open the demo](https://changcv2021.github.io/PlantAgentBench/)
 
-This static viewer presents **50 shared cases**, with **501 existing recordings across 11 model configurations**. Switch models on the same case: **Ours · Qwen3.5-9B** (green), **open-weight models** (blue), and **closed-source models** (purple). Ours is Qwen3.5-9B fine-tuned on Kimi2.6 trajectories, checkpoint `export-844`.
+This static viewer presents **50 shared cases**, with **501 existing recordings across 11 model configurations**. Switch models on the same case: **Ours · Qwen3.5-9B (Thinking)** (green), **open-weight models** (blue), and **closed-source models** (warm brown). Ours is Qwen3.5-9B fine-tuned on Kimi2.6 trajectories, checkpoint `export-844`.
 
 Models with all 50 recordings: Ours, Qwen3.5-9B (Thinking), Qwen3.5-9B, Qwen3.5-27B, Kimi2.6, Gemma4-31B, Claude Opus 5.5, GPT-5.4, GPT-6-Astra, and Grok 4.7. Muse Glimmer 30B has **1/50** matched recordings; all other cases are explicitly unavailable. These counts describe this gallery, not whole-benchmark completion.
 
@@ -69,6 +69,6 @@ Every recording retains its own actions, outcome, final report, image visibility
 
 - **Qwen3.5-9B**: full-catalog JSON actions, thinking disabled, 4,096 output tokens.
 - **Qwen3.5-9B (Thinking)**: Core-3K native tool calls, thinking enabled, 32,768 output tokens.
-- **Ours · Qwen3.5-9B**: fine-tuned from the thinking base on Kimi2.6 trajectories.
+- **Ours · Qwen3.5-9B (Thinking)**: fine-tuned from the thinking base on Kimi2.6 trajectories.
 
 The runs also differ in sampling settings; this is not a controlled thinking-mode ablation. Coverage fractions have been removed from model buttons. [MODEL_COVERAGE.md](MODEL_COVERAGE.md) reports saved full-run progress and exact demo matches. Integration tests are not substituted for formal results. The existing replay files remain unchanged.

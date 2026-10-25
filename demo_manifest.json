@@ -1,5 +1,5 @@
 {
-  "version": "demo-50-v6-thinking-labels",
+  "version": "demo-50-v7-model-colors",
   "run_id": "qwen35-9b-sft844-3k-v2-toolcall",
   "checkpoint": "export-844",
   "task_ids": [
@@ -245,7 +245,7 @@
   "models": [
     {
       "id": "ours",
-      "name": "Ours · Qwen3.5-9B",
+      "name": "Ours · Qwen3.5-9B (Thinking)",
       "group": "ours",
       "protocol": "Native tool calls · thinking",
       "detail": "Base: Qwen3.5-9B (Thinking) · SFT on Kimi2.6 trajectories",
