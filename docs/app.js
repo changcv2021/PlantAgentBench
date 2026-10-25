@@ -15,15 +15,22 @@ const hero=manifest.cases.find(c=>c.p==='P4'&&c.thumbnail)||manifest.cases.find(
 if(hero&&$('#hero-image')){$('#hero-image').src=hero.thumbnail;$('#hero-image').alt='Recorded plant evidence from '+hero.source.name;}
 function stop(){if(timer){clearInterval(timer);timer=null;}const b=$('#play');if(b)b.textContent='▶ Play';}
 function model(){return manifest.models.find(m=>m.id===modelId);}
+function chooseModel(id){modelId=id;renderModels();selectP(primary);loadCase(selectedId||manifest.cases.find(c=>c.p===primary).id);}
 function updateURL(){if(selectedId)history.replaceState(null,'','#case='+selectedId+'&model='+modelId+'&step='+position);}
+function renderCoverage(){
+ const holder=$('#model-coverage');const table=el('table');const head=el('tr');
+ ['Model','Completed formal tasks','These 50 cases','Status'].forEach(t=>head.append(el('th','',t)));table.append(add(el('thead'),head));const body=el('tbody');
+ for(const r of manifest.full_run_coverage||[]){const row=el('tr');[r.name,r.formal_completed.toLocaleString('en-US')+' / '+r.formal_total.toLocaleString('en-US'),r.demo_available+' / 50',r.note].forEach(v=>row.append(el('td','',v)));body.append(row);}
+ table.append(body);holder.replaceChildren(table);
+}
 function renderModels(){
  const panel=$('#model-picker');panel.replaceChildren();
  for(const [group,label] of [['ours','Ours'],['open','Open-weight'],['closed','Closed-source']]){
   const section=el('div','model-group '+group);section.setAttribute('role','group');section.setAttribute('aria-label',label+' models');section.append(el('span','model-group-label',label));
   for(const m of manifest.models.filter(m=>m.group===group)){
-   const b=button('',()=>{modelId=m.id;renderModels();selectP(primary);loadCase(selectedId||manifest.cases.find(c=>c.p===primary).id);},'model-chip '+group);
-   b.dataset.model=m.id;b.setAttribute('aria-pressed',String(m.id===modelId));b.title=m.detail+' · '+m.available_count+'/50 recordings';
-   add(b,el('span','',m.name),el('small','',m.available_count+'/50'));section.append(b);
+   const b=button(m.name,()=>chooseModel(m.id),'model-chip '+group);
+   b.dataset.model=m.id;b.setAttribute('aria-pressed',String(m.id===modelId));b.title=m.detail;
+   section.append(b);
   }panel.append(section);
  }
  $('#model-description').textContent=model().detail+' · '+model().protocol;
@@ -53,7 +60,7 @@ async function loadCase(id,step=0){
  const run=entry.runs[modelId];const requestedModel=modelId;const key=modelId==='ours'?id:modelId+'::'+id;
  if(!run){active=null;position=0;viewer.dataset.case=id;viewer.dataset.model=modelId;viewer.dataset.step='0';viewer.replaceChildren(add(el('div','unavailable'),el('span','model-tag '+model().group,model().name),el('h3','',entry.title),el('p','','No completed recording is available for this model on this case.'),el('p','small','Choose another case or model. A missing recording is not counted as a failed task.')));updateURL();return;}
  try{
-  if(!window.PAB_CASES?.[key])await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=run.file+'?v=models5';script.onload=()=>{script.remove();resolve();};script.onerror=()=>{script.remove();reject(new Error('Unable to load this recording. Please reload.'));};document.head.append(script);});
+  if(!window.PAB_CASES?.[key])await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=run.file+'?v=models6';script.onload=()=>{script.remove();resolve();};script.onerror=()=>{script.remove();reject(new Error('Unable to load this recording. Please reload.'));};document.head.append(script);});
   if(version!==loadVersion||requestedModel!==modelId)return;active=window.PAB_CASES[key];if(!active)throw new Error('This recording did not load. Please reload.');position=Math.max(0,Math.min(step,active.steps.length));render();updateURL();
  }catch(e){if(version===loadVersion)viewer.replaceChildren(el('p','loading',e.message));}
 }
@@ -108,5 +115,5 @@ document.querySelectorAll('[data-p]').forEach(b=>{b.addEventListener('click',()=
 $('#close-image').addEventListener('click',()=>$('#image-dialog').close());$('#image-dialog').addEventListener('click',e=>{if(e.target===$('#image-dialog'))$('#image-dialog').close();});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
 function fromHash(){const q=new URLSearchParams(location.hash.slice(1));const id=q.get('case');const entry=manifest.cases.find(c=>c.id===id);if(entry){const wanted=q.get('model');modelId=manifest.models.some(m=>m.id===wanted)?wanted:'ours';renderModels();selectP(entry.p);loadCase(id,Number(q.get('step'))||0);return true;}return false;}
-window.addEventListener('hashchange',fromHash);if(!fromHash()){renderModels();selectP(primary);loadCase(manifest.cases.find(c=>c.p===primary).id);}
+renderCoverage();window.addEventListener('hashchange',fromHash);if(!fromHash()){renderModels();selectP(primary);loadCase(manifest.cases.find(c=>c.p===primary).id);}
 })();

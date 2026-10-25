@@ -1,5 +1,5 @@
 {
-  "version": "demo-50-v5-multimodel",
+  "version": "demo-50-v6-thinking-labels",
   "run_id": "qwen35-9b-sft844-3k-v2-toolcall",
   "checkpoint": "export-844",
   "task_ids": [
@@ -248,23 +248,23 @@
       "name": "Ours · Qwen3.5-9B",
       "group": "ours",
       "protocol": "Native tool calls · thinking",
-      "detail": "Base: Qwen3.5-9B · SFT on Kimi2.6 trajectories",
+      "detail": "Base: Qwen3.5-9B (Thinking) · SFT on Kimi2.6 trajectories",
+      "available_count": 50
+    },
+    {
+      "id": "qwen9b-json",
+      "name": "Qwen3.5-9B",
+      "group": "open",
+      "protocol": "JSON actions · thinking off",
+      "detail": "Base model · thinking disabled · 4,096-token output limit",
       "available_count": 50
     },
     {
       "id": "qwen9b",
-      "name": "Qwen3.5-9B",
+      "name": "Qwen3.5-9B (Thinking)",
       "group": "open",
       "protocol": "Native tool calls · thinking",
-      "detail": "Base model · native tool calls",
-      "available_count": 50
-    },
-    {
-      "id": "kimi26",
-      "name": "Kimi2.6",
-      "group": "open",
-      "protocol": "Native tool calls · thinking",
-      "detail": "Teacher model · native tool calls",
+      "detail": "Base model · thinking enabled · 32,768-token output limit",
       "available_count": 50
     },
     {
@@ -276,11 +276,11 @@
       "available_count": 50
     },
     {
-      "id": "qwen9b-json",
-      "name": "Qwen3.5-9B · JSON",
+      "id": "kimi26",
+      "name": "Kimi2.6",
       "group": "open",
-      "protocol": "Recorded JSON action protocol",
-      "detail": "Qwen3.5-9B · JSON · saved evaluation",
+      "protocol": "Native tool calls · thinking",
+      "detail": "Teacher model · native tool calls",
       "available_count": 50
     },
     {
@@ -4443,5 +4443,51 @@
       }
     }
   },
-  "comparison_notice": "Fixed curated cases; model protocols differ. This gallery is not a representative model ranking. Ours is the default; no model outputs or saved scores are changed."
+  "comparison_notice": "Fixed curated cases; model protocols differ. This gallery is not a representative model ranking. Ours is the default; no model outputs or saved scores are changed.",
+  "model_count": 11,
+  "configuration_count": 11,
+  "full_run_coverage": [
+    {
+      "name": "Qwen3.5-9B",
+      "formal_completed": 324590,
+      "formal_total": 324590,
+      "demo_available": 50,
+      "note": "Full catalog completed"
+    },
+    {
+      "name": "Qwen3.5-27B",
+      "formal_completed": 311472,
+      "formal_total": 324590,
+      "demo_available": 50,
+      "note": "Partial saved formal run"
+    },
+    {
+      "name": "Gemma4-31B",
+      "formal_completed": 324590,
+      "formal_total": 324590,
+      "demo_available": 50,
+      "note": "Full catalog completed"
+    },
+    {
+      "name": "Muse Glimmer 30B",
+      "formal_completed": 2994,
+      "formal_total": 324590,
+      "demo_available": 1,
+      "note": "Partial saved formal run"
+    },
+    {
+      "name": "Llama 4 Scout",
+      "formal_completed": 0,
+      "formal_total": 324590,
+      "demo_available": 0,
+      "note": "No completed formal tasks"
+    },
+    {
+      "name": "Qwen3.8-Flash-Next",
+      "formal_completed": 0,
+      "formal_total": 324590,
+      "demo_available": 0,
+      "note": "26 completed integration-test cases; not formal results"
+    }
+  ]
 }

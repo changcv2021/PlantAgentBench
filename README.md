@@ -6,7 +6,7 @@
 
 This static viewer presents **50 shared cases**, with **501 existing recordings across 11 model configurations**. Switch models on the same case: **Ours · Qwen3.5-9B** (green), **open-weight models** (blue), and **closed-source models** (purple). Ours is Qwen3.5-9B fine-tuned on Kimi2.6 trajectories, checkpoint `export-844`.
 
-Models with all 50 recordings: Ours, Qwen3.5-9B (native tool calls), Qwen3.5-9B (JSON actions), Qwen3.5-27B, Kimi2.6, Gemma4-31B, Claude Opus 5.5, GPT-5.4, GPT-6-Astra, and Grok 4.7. Muse Glimmer 30B has **1/50** matched recordings; all other cases are explicitly unavailable. These counts describe this gallery, not whole-benchmark completion.
+Models with all 50 recordings: Ours, Qwen3.5-9B (Thinking), Qwen3.5-9B, Qwen3.5-27B, Kimi2.6, Gemma4-31B, Claude Opus 5.5, GPT-5.4, GPT-6-Astra, and Grok 4.7. Muse Glimmer 30B has **1/50** matched recordings; all other cases are explicitly unavailable. These counts describe this gallery, not whole-benchmark completion.
 
 There are 10 cases per task family:
 
@@ -29,7 +29,7 @@ The replay observation panels render only evidence received by that replay posit
 ## What this release does and does not include
 
 - The frontend code and each available model recording of the fixed 50 cases are included. Failures are retained; missing recordings are never replaced by another model’s output.
-- These are curated cases from frozen **Core-3K v2**. Run protocols differ and are labelled. The native tool-call Qwen3.5-9B base is shown separately from the JSON-action configuration. They are **not** a random sample, a new evaluation, or an estimate of overall model accuracy.
+- These are curated cases from frozen **Core-3K v2**. Run protocols differ and are labelled. Qwen3.5-9B (Thinking) and Qwen3.5-9B are separate, explicitly labelled entries. Ours uses the Qwen3.5-9B thinking base. They are **not** a random sample, a new evaluation, or an estimate of overall model accuracy.
 - Recorded model reasoning is model-generated text, not a guarantee that its biological claims are correct. Success means the existing task evaluator accepted the submission.
 - Private Gold, source-reference answer tables, the full benchmark, raw API envelopes, credentials, and model weights are not part of this release.
 - Images use the exact frozen benchmark display bytes. The photo gallery includes both requested images and registered images not requested during the saved run, with explicit labels. Source records may already contain documented aggregation or processing. The environment does not simulate plant growth or care outcomes.
@@ -64,3 +64,11 @@ Eschikon materials are included for this non-commercial research demonstration u
 ## Multi-model replay (v5)
 
 Every recording retains its own actions, outcome, final report, image visibility and query cost. Recorded reasoning is displayed only when available; returned reasoning summaries are labelled as summaries. The gallery does not reconstruct hidden reasoning. Different protocols and curated cases prevent interpreting this as a controlled model ranking. No inference, rescoring, Gold edits or task changes were performed.
+
+## Model labels and availability (v6)
+
+- **Qwen3.5-9B**: full-catalog JSON actions, thinking disabled, 4,096 output tokens.
+- **Qwen3.5-9B (Thinking)**: Core-3K native tool calls, thinking enabled, 32,768 output tokens.
+- **Ours · Qwen3.5-9B**: fine-tuned from the thinking base on Kimi2.6 trajectories.
+
+The runs also differ in sampling settings; this is not a controlled thinking-mode ablation. Coverage fractions have been removed from model buttons. [MODEL_COVERAGE.md](MODEL_COVERAGE.md) reports saved full-run progress and exact demo matches. Integration tests are not substituted for formal results. The existing replay files remain unchanged.
