@@ -1,5 +1,5 @@
 {
-  "version": "demo-50-v3-curated",
+  "version": "demo-50-v4-visual-p2",
   "run_id": "qwen35-9b-sft844-3k-v2-toolcall",
   "checkpoint": "export-844",
   "task_ids": [
@@ -13,16 +13,16 @@
     "a_6f89a3b81de67476e13bd1d964388efa",
     "a_7bf0b702128172f5fd6f07d9fa92167f",
     "a_ecd24952ffbc544e62e2aba190167534",
+    "a_ff86f68460c63afce02aa4b0eb6cbcdf",
+    "a_f8bc9df06067c552f389ace3c66fa965",
+    "a_f86635e8f37e30e8910d24002c91bcfe",
+    "a_f52e84761cdf2e8bdbacfdfaaf6c86ff",
+    "a_f2b8c316614797d203088af002a8809b",
     "a_5864db9af6ff8358ce0a004567953327",
     "a_7f0b3b6bf9f6d8ed42fa943378ded0a8",
-    "a_ca818840e71a68c110f2a1b2eb3e4805",
-    "a_fec5725cc0b891df580f40a6831e45ed",
     "a_257459dedda57f85247cc342c610bd8c",
     "a_317ad525f0dd5e78904085fe79b30862",
     "a_9ae2b9749e7ea991e53d436cc6803856",
-    "a_cbe4816225280fc706d404eb18058e6c",
-    "a_e032778a481423dba601437e3aa3617b",
-    "a_d0b9b6807b5149695c60199ca8bbb235",
     "a_22caab6d4e4aa25adc8a4563f6bbe56e",
     "a_ffbe0bb8ba1aac31699d611f3d9700ad",
     "a_fb46685ec205529fb3e2fdb847d3feff",
@@ -91,14 +91,19 @@
     "a_a7a8856bfc5691ebf692b0abac78ffcc",
     "a_bc06e1a5b4ac836451165a02f2dfe798",
     "a_c1e9cfb7f9818b8fb64575b0eaab1a67",
+    "a_ca818840e71a68c110f2a1b2eb3e4805",
+    "a_cbe4816225280fc706d404eb18058e6c",
+    "a_d0b9b6807b5149695c60199ca8bbb235",
     "a_da5dd0ab6b184fd693bcffad1e532cdd",
     "a_ddc9996146a04d336cb1e54c489e51be",
     "a_de6de04f01b02719a6364231aa64bbc7",
     "a_dedc30c08baae1bbbb045496c299de6b",
     "a_df17890ef9c7cfd65cb7c564f217f906",
+    "a_e032778a481423dba601437e3aa3617b",
     "a_ee405e91732e347583985d6ca0119b08",
     "a_f54fc56d5f328e98c871fd05368be44a",
-    "a_f75c4d96ae0607a423d3058ccb704217"
+    "a_f75c4d96ae0607a423d3058ccb704217",
+    "a_fec5725cc0b891df580f40a6831e45ed"
   ],
   "all_exposed_task_ids": [
     "a_01576a2300a05aa3378778a874a2d20f",
@@ -181,25 +186,28 @@
     "a_e102920a4eab7a2f397132d8af469338",
     "a_ecd24952ffbc544e62e2aba190167534",
     "a_ee405e91732e347583985d6ca0119b08",
+    "a_f2b8c316614797d203088af002a8809b",
+    "a_f52e84761cdf2e8bdbacfdfaaf6c86ff",
     "a_f54fc56d5f328e98c871fd05368be44a",
     "a_f75c4d96ae0607a423d3058ccb704217",
+    "a_f86635e8f37e30e8910d24002c91bcfe",
+    "a_f8bc9df06067c552f389ace3c66fa965",
     "a_f9249b8f0896cc20dc854381749ffafb",
     "a_fb46685ec205529fb3e2fdb847d3feff",
     "a_fec5725cc0b891df580f40a6831e45ed",
     "a_ff028bb42f5314a4fd559b1f43133c87",
+    "a_ff86f68460c63afce02aa4b0eb6cbcdf",
     "a_ffbe0bb8ba1aac31699d611f3d9700ad"
   ],
   "selection_criteria": [
-    "Saved strict task success",
-    "No failed actions or repeated identical queries",
-    "New evidence acquisition",
-    "Distinct independent case groups",
-    "Task/source variety",
-    "Stage advance and reassessment for P5"
+    "45 curated v3 cases retained",
+    "Five P2 tasks have original registered images",
+    "Prefer images actually observed by the model",
+    "P2 visual selection permits unsuccessful outcomes; saved scores remain authoritative"
   ],
-  "notice": "Curated demonstration successes, not a representative performance sample. Active and previously exposed IDs must not be treated as unexposed test tasks. Frozen benchmark and evaluations are unchanged.",
+  "notice": "Selected recorded demonstrations, not a representative performance sample. Each case displays its saved outcome. Original frozen tasks, Gold, model outputs and evaluations are unchanged.",
   "image_summary": {
-    "unique_images": 79,
+    "unique_images": 94,
     "by_task": {
       "P1": {
         "cases": 10,
@@ -209,8 +217,8 @@
       },
       "P2": {
         "cases": 10,
-        "with_images": 0,
-        "episode_images": 0,
+        "with_images": 5,
+        "episode_images": 15,
         "observed_images": 0
       },
       "P3": {
@@ -232,5 +240,6 @@
         "observed_images": 18
       }
     }
-  }
+  },
+  "eschikon_terms": "Eschikon-derived evidence and replay files retain upstream InC-NC rights; non-commercial research demonstration. Excluded from the CC BY-SA replay grant."
 }

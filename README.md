@@ -4,7 +4,7 @@
 
 [Open the demo](https://changcv2021.github.io/PlantAgentBench/)
 
-This initial release contains a static episode viewer and **50 real, successful recordings** from **Qwen3.5-9B fine-tuned on Kimi2.6-generated trajectories**, checkpoint `export-844`. There are 10 examples for each PlantAgentBench task family:
+This initial release contains a static episode viewer and **50 real recordings** from **Qwen3.5-9B fine-tuned on Kimi2.6-generated trajectories**, checkpoint `export-844`. There are 10 examples for each PlantAgentBench task family:
 
 | Task | What the replay demonstrates |
 |---|---|
@@ -25,7 +25,7 @@ The replay observation panels render only evidence received by that replay posit
 ## What this release does and does not include
 
 - The frontend code and 50 selected public replay exports are included.
-- These are curated successes from frozen **Core-3K v2**, using native tool calls with thinking. They are **not** a random sample, a new evaluation, or an estimate of overall model accuracy.
+- These are curated recordings from frozen **Core-3K v2**, using native tool calls with thinking. They are **not** a random sample, a new evaluation, or an estimate of overall model accuracy.
 - Recorded model reasoning is model-generated text, not a guarantee that its biological claims are correct. Success means the existing task evaluator accepted the submission.
 - Private Gold, source-reference answer tables, the full benchmark, raw API envelopes, credentials, and model weights are not part of this release.
 - Images use the exact frozen benchmark display bytes. The photo gallery includes both requested images and registered images not requested during the saved run, with explicit labels. Source records may already contain documented aggregation or processing. The environment does not simulate plant growth or care outcomes.
@@ -49,8 +49,10 @@ Original viewer code is MIT licensed. The included source-derived evidence and r
 
 [中文说明](README_zh.md)
 
-## Curated interaction selection (v3)
+## Current selection (v4)
 
-The current 50 runs are selected from 1,166 existing successes with eligible source credits. Each comes from a different independent case group. Selection favors useful new evidence, distinct evidence tools, clear references and stage reassessment, and excludes failed actions and repeated identical queries. See [the case selection table](DEMO_SELECTION.md). The original model outputs and scores remain unchanged.
+45 cases from the v3 gallery are retained. Five P2 cases are replaced with original image-bearing Eschikon investigations from the same frozen Core-3K v2 and saved SFT run. Selection allows unsuccessful outcomes; each case displays its actual saved task outcome. A run without a final report is labelled explicitly. No new model inference or scoring is performed.
 
-The available successful P1/P2 runs are record-based; their demonstrations therefore show measurement queries. P5 now includes growth, environment and consultation follow-up. N/A metrics remain N/A.
+P1 remains record-based. P2 contains five visual and five measurement-based cases. Images the model did not open are labelled as visitor previews. See [the selection table](DEMO_SELECTION.md) for registered and observed image counts.
+
+Eschikon materials are included for this non-commercial research demonstration under the source's **In Copyright – Non-Commercial Use Permitted** statement. They are excluded from the CC BY-SA replay grant and the MIT code license; see [DATA_TERMS.md](DATA_TERMS.md). Original outputs, scores and frozen tasks remain unchanged.
