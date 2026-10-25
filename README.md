@@ -18,7 +18,7 @@ This initial release contains a static episode viewer and **50 real, successful 
 
 Choose a task tab and a case. Use **Next**, **Back**, the timeline, or **Play** to follow the run. Each step shows the recorded action, environment feedback, current evidence, remaining budget, and stage. Expand the model's recorded reasoning or exact action when useful. Images can be enlarged; the final report includes clickable evidence references. A replay can be downloaded as JSON.
 
-**Case photos are visible immediately**, above the replay controls. This gallery contains all images registered in that frozen episode, including images the model did not request. Each photo indicates when the agent opened it, or that it was not opened. Click a photo to enlarge it or jump to its recorded inspection step. Record-only episodes explicitly state that they have no images. The page opens on a P3 visual case by default.
+**Case photos are visible immediately**, beside the recorded investigation. This gallery contains all images registered in that frozen episode, including images the model did not request. Each photo indicates when the agent opened it, or that it was not opened. Click a photo to enlarge it or jump to its recorded inspection step. Record-only episodes explicitly state that they have no images. The page opens on a P3 visual case by default.
 
 The replay observation panels render only evidence received by that replay position. The separate visitor photo gallery is a preview and does not change the recorded agent observations. All steps are saved locally in the demo assets, so this is an explanatory replay, not a live or secure evaluation environment.
 
@@ -29,7 +29,7 @@ The replay observation panels render only evidence received by that replay posit
 - Recorded model reasoning is model-generated text, not a guarantee that its biological claims are correct. Success means the existing task evaluator accepted the submission.
 - Private Gold, source-reference answer tables, the full benchmark, raw API envelopes, credentials, and model weights are not part of this release.
 - Images use the exact frozen benchmark display bytes. The photo gallery includes both requested images and registered images not requested during the saved run, with explicit labels. Source records may already contain documented aggregation or processing. The environment does not simulate plant growth or care outcomes.
-- `demo_manifest.json` lists all 50 exposed episode IDs. They should no longer be treated as unexposed evaluation examples. This export does not change the original frozen benchmark or its prior results.
+- `demo_manifest.json` lists the active 50 episode IDs and preserves the IDs exposed by previous demo versions. They should no longer be treated as unexposed evaluation examples. This export does not change the original frozen benchmark or its prior results.
 
 ## Run locally
 
@@ -48,3 +48,9 @@ P1, P2, and P5 typically require measurements, environmental context, or records
 Original viewer code is MIT licensed. The included source-derived evidence and replay data are governed separately; see [DATA_TERMS.md](DATA_TERMS.md). In particular, MIRAGE-derived materials retain CC BY-SA 4.0 terms. The code license does not relicense upstream images, text, or knowledge entries.
 
 [中文说明](README_zh.md)
+
+## Curated interaction selection (v3)
+
+The current 50 runs are selected from 1,166 existing successes with eligible source credits. Each comes from a different independent case group. Selection favors useful new evidence, distinct evidence tools, clear references and stage reassessment, and excludes failed actions and repeated identical queries. See [the case selection table](DEMO_SELECTION.md). The original model outputs and scores remain unchanged.
+
+The available successful P1/P2 runs are record-based; their demonstrations therefore show measurement queries. P5 now includes growth, environment and consultation follow-up. N/A metrics remain N/A.
