@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Watch a plant agent inspect images, query records, consult knowledge, and make decisions. 50 recorded PlantAgentBench demonstrations from Qwen3.5-9B fine-tuned on Kimi2.6 trajectories.">
+  <meta name="theme-color" content="#173e32"><title>PlantAgentBench — Watch a plant agent at work</title>
+  <link rel="icon" href="leaf.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#explorer">Skip to episode explorer</a>
+<header class="site-header"><a class="brand" href="#"><img src="leaf.svg" alt="" width="30" height="30">PlantAgentBench<span class="beta">DEMO</span></a><nav aria-label="Main navigation"><a href="#explorer">Explore episodes</a><a href="#next">Try your own plant</a><a href="https://github.com/changcv2021/PlantAgentBench">GitHub <span aria-hidden="true">↗</span></a></nav></header>
+<main>
+<section class="hero" aria-labelledby="hero-title">
+ <div><p class="eyebrow"><span class="dot"></span> A WINDOW INTO PLANT AGENTS</p><h1 id="hero-title">Beyond an answer.<br><em>Watch the investigation.</em></h1><p class="hero-copy">See an agent choose what to inspect, gather evidence, and decide what to do next — one real interaction at a time.</p><div class="hero-actions"><a class="button primary" href="#explorer">Explore 50 recorded episodes <span aria-hidden="true">↓</span></a><span class="model-tag">Qwen3.5-9B<br><b>Fine-tuned with Kimi2.6 trajectories</b></span></div><p class="curation">10 successful examples per task. Curated demonstrations, not an estimate of overall performance.</p></div>
+ <div class="hero-visual" aria-label="A preview of a real plant image from the demonstrations"><div class="visual-top"><span class="small-dot"></span> FROM THE RECORDED EVIDENCE <span>01 / 50</span></div><div class="hero-image-wrap"><img id="hero-image" alt="A real plant image used in a recorded PlantAgentBench episode"><div class="photo-label">Observed evidence<span>Actual benchmark display image</span></div></div><div class="visual-flow"><span>Observe</span><i>→</i><span>Investigate</span><i>→</i><span>Decide</span></div></div>
+</section>
+<section class="overview" aria-label="Demo overview"><div><b>50</b><span>recorded episodes</span></div><div><b>5</b><span>plant task families</span></div><div><b>1</b><span>shared agent environment</span></div><div><b>Every step</b><span>reasoning · actions · evidence</span></div></section>
+<section class="explorer section" id="explorer" aria-labelledby="explorer-title">
+ <div class="section-heading"><div><p class="eyebrow">THE EPISODE EXPLORER</p><h2 id="explorer-title">Follow the evidence.</h2></div><p>Choose a task and a case. Step through the saved run at your own pace.</p></div>
+ <div class="tabs" role="tablist" aria-label="Plant task families">
+  <button id="tab-P1" role="tab" aria-selected="true" aria-controls="episode-panel" data-p="P1"><span>P1</span>Growth monitoring</button>
+  <button id="tab-P2" role="tab" aria-selected="false" aria-controls="episode-panel" data-p="P2" tabindex="-1"><span>P2</span>Environment investigation</button>
+  <button id="tab-P3" role="tab" aria-selected="false" aria-controls="episode-panel" data-p="P3" tabindex="-1"><span>P3</span>Active diagnosis</button>
+  <button id="tab-P4" role="tab" aria-selected="false" aria-controls="episode-panel" data-p="P4" tabindex="-1"><span>P4</span>Care decisions</button>
+  <button id="tab-P5" role="tab" aria-selected="false" aria-controls="episode-panel" data-p="P5" tabindex="-1"><span>P5</span>Longitudinal follow-up</button>
+ </div>
+ <p class="task-intro" id="task-intro"></p>
+ <div class="explorer-layout" id="episode-panel" role="tabpanel" aria-labelledby="tab-P1">
+  <aside class="case-sidebar"><div class="sidebar-title">CHOOSE A CASE <span id="case-count">10 episodes</span></div><div id="case-list"></div></aside>
+  <article class="viewer" id="viewer" aria-label="Recorded episode"><p class="loading">Loading recorded demonstrations…</p></article>
+ </div>
+ <p class="replay-note"><span aria-hidden="true">◉</span> This is a replay of saved model outputs. Advancing the timeline reveals recorded feedback; it does not call a model or change the outcome.</p>
+</section>
+<section class="how section" aria-labelledby="how-title"><div><p class="eyebrow">ONE ENVIRONMENT, DIFFERENT INVESTIGATIONS</p><h2 id="how-title">The agent chooses<br>its next step.</h2><p>The task supplies an initial observation and a finite set of accessible evidence. What the agent asks for — and when it decides to submit — is visible in the replay.</p></div><div class="how-cards"><article><span class="step-number">01</span><h3>Start with what is known</h3><p>Read the task and its initial records. Unrequested images and later-stage records stay outside the agent’s visible evidence.</p></article><article><span class="step-number">02</span><h3>Investigate deliberately</h3><p>Inspect an image, query a measurement, or search reference knowledge. Follow the actual tool arguments and the evidence returned.</p></article><article><span class="step-number">03</span><h3>Commit to a decision</h3><p>Review a stage assessment or final report, including cited evidence. Longitudinal episodes reveal existing records in stages.</p></article></div></section>
+<section class="next section" id="next" aria-labelledby="next-title"><div class="next-heading"><span class="badge muted">PLANNED NEXT</span><h2 id="next-title">Your plant.<br>Your question.</h2><p>We plan to release the fine-tuned model and a Hugging Face GPU demo for image-based diagnosis and care. To make a photo upload a useful starting point, the live experience will focus on P3 and P4.</p></div><div class="next-cards"><article><span class="task-code">P3</span><h3>Investigate a plant problem</h3><p>Upload a plant photo and describe what you observe. Explore a diagnosis, supporting visual evidence, and uncertainty.</p></article><article><span class="task-code">P4</span><h3>Consider a care decision</h3><p>Upload a photo with your care question. Explore relevant reference knowledge, possible actions, and their conditions.</p></article><p class="next-note">P1, P2 and P5 usually need measurements, environmental records, or observations across time. A single photo does not provide that context.</p><button class="button unavailable" disabled>Image upload & model inference — coming later</button><p class="small">This release contains recorded demonstrations. Uploads and hosted inference are not enabled.</p></div></section>
+<section class="about section" id="about"><div><p class="eyebrow">ABOUT THIS RELEASE</p><h2>Real trajectories.<br>A focused first release.</h2></div><div><p>The acting model is <strong>Qwen3.5-9B fine-tuned using Kimi2.6-generated trajectories</strong> (checkpoint export-844). These recordings come from the frozen PlantAgentBench Core-3K v2 evaluation, using native tool calls and thinking.</p><p>Each selected case passed its existing task evaluator. Success refers to the benchmark’s task requirements, not independent confirmation of every biological statement. The selection is intentionally successful and should not be used to infer benchmark-wide accuracy.</p><p>The viewer shows the original model’s recorded reasoning, actions, and visible evidence. It does not publish private reference answers or the full benchmark. The 50 exposed episode IDs are listed in the repository so future evaluations can account for their public availability.</p><a href="https://github.com/changcv2021/PlantAgentBench/blob/main/DATA_TERMS.md">Source credits and data terms <span aria-hidden="true">↗</span></a></div></section>
+</main>
+<footer><a class="brand" href="#"><img src="leaf.svg" width="25" height="25" alt="">PlantAgentBench</a><p>Observe. Investigate. Decide.</p><a href="https://github.com/changcv2021/PlantAgentBench">Demo source ↗</a></footer>
+<dialog id="image-dialog"><button id="close-image" aria-label="Close image">×</button><img id="large-image" alt=""><p id="image-caption"></p></dialog>
+<noscript>This interactive replay requires JavaScript. The source and recorded demo manifest are available in the GitHub repository.</noscript>
+</body></html>
