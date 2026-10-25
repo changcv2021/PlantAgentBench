@@ -53,6 +53,6 @@ Original viewer code is MIT licensed. The included source-derived evidence and r
 
 45 cases from the v3 gallery are retained. Five P2 cases are replaced with original image-bearing Eschikon investigations from the same frozen Core-3K v2 and saved SFT run. Selection allows unsuccessful outcomes; each case displays its actual saved task outcome. A run without a final report is labelled explicitly. No new model inference or scoring is performed.
 
-P1 remains record-based. P2 contains five visual and five measurement-based cases. Images the model did not open are labelled as visitor previews. See [the selection table](DEMO_SELECTION.md) for registered and observed image counts.
+P1 remains record-based. P2 contains five image-bearing and five record-only cases. In all five image-bearing runs, the agent used QUERY → QUERY → SUBMIT and did not inspect the images; those images are explicitly labelled as unobserved. Their saved task outcomes are successful. Images the model did not open are labelled as visitor previews. See [the selection table](DEMO_SELECTION.md) for registered and observed image counts.
 
 Eschikon materials are included for this non-commercial research demonstration under the source's **In Copyright – Non-Commercial Use Permitted** statement. They are excluded from the CC BY-SA replay grant and the MIT code license; see [DATA_TERMS.md](DATA_TERMS.md). Original outputs, scores and frozen tasks remain unchanged.

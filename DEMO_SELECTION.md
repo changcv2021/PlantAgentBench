@@ -56,3 +56,5 @@
 | P5 | `a_ff028bb42f5314a4fd559b1f43133c87` | L02 | 0 | 0 | Yes |
 
 P1 is unchanged and remains record-based. Images not opened by the model are labelled in the visitor gallery. All previously exposed IDs are retained in the exposure ledger. Source-specific restrictions, including Eschikon non-commercial use, are listed in DATA_TERMS.md.
+
+All five added P2 runs used QUERY → QUERY → SUBMIT, with no INSPECT action. Their 15 archived images were available to request but not observed by the model. These demonstrate an image-bearing task configuration and the agent’s actual record-query policy, not successful visual reasoning.
