@@ -4,6 +4,8 @@ The MIT license in this repository applies to the original viewer code and autho
 
 The demo exports cite their source on each evidence card and retain episode and evidence identifiers. Images are copied byte-for-byte from the rendered evidence used in the original evaluation; no additional image generation or retouching is performed for this website. Tables and text reflect the benchmark's existing record packets. Model outputs are labelled separately from source evidence.
 
+The visitor gallery also includes frozen episode images that the model could have requested but did not open. These are labelled separately from images actually observed during the saved run. No images from unrelated cases are added to record-only tasks.
+
 | Source | Attribution | Source terms and link |
 |---|---|---|
 | Horti-M3-Tomato / 2023–2025 Tomato dataset | Yifei He, Yu Gong, Xuefeng Zhang | [CC BY 4.0; Zenodo release](https://doi.org/10.5281/zenodo.17217565) |

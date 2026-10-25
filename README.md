@@ -18,7 +18,9 @@ This initial release contains a static episode viewer and **50 real, successful 
 
 Choose a task tab and a case. Use **Next**, **Back**, the timeline, or **Play** to follow the run. Each step shows the recorded action, environment feedback, current evidence, remaining budget, and stage. Expand the model's recorded reasoning or exact action when useful. Images can be enlarged; the final report includes clickable evidence references. A replay can be downloaded as JSON.
 
-The viewer renders only evidence received by that replay position. All steps are saved locally in the demo assets, so this is an explanatory replay, not a live or secure evaluation environment.
+**Case photos are visible immediately**, above the replay controls. This gallery contains all images registered in that frozen episode, including images the model did not request. Each photo indicates when the agent opened it, or that it was not opened. Click a photo to enlarge it or jump to its recorded inspection step. Record-only episodes explicitly state that they have no images. The page opens on a P3 visual case by default.
+
+The replay observation panels render only evidence received by that replay position. The separate visitor photo gallery is a preview and does not change the recorded agent observations. All steps are saved locally in the demo assets, so this is an explanatory replay, not a live or secure evaluation environment.
 
 ## What this release does and does not include
 
@@ -26,7 +28,7 @@ The viewer renders only evidence received by that replay position. All steps are
 - These are curated successes from frozen **Core-3K v2**, using native tool calls with thinking. They are **not** a random sample, a new evaluation, or an estimate of overall model accuracy.
 - Recorded model reasoning is model-generated text, not a guarantee that its biological claims are correct. Success means the existing task evaluator accepted the submission.
 - Private Gold, source-reference answer tables, the full benchmark, raw API envelopes, credentials, and model weights are not part of this release.
-- Image bytes are the exact rendered images received during evaluation. Source records may already contain documented aggregation or processing. The environment does not simulate plant growth or care outcomes.
+- Images use the exact frozen benchmark display bytes. The photo gallery includes both requested images and registered images not requested during the saved run, with explicit labels. Source records may already contain documented aggregation or processing. The environment does not simulate plant growth or care outcomes.
 - `demo_manifest.json` lists all 50 exposed episode IDs. They should no longer be treated as unexposed evaluation examples. This export does not change the original frozen benchmark or its prior results.
 
 ## Run locally

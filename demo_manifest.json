@@ -1,5 +1,5 @@
 {
-  "version": "demo-50-v1",
+  "version": "demo-50-v2-images",
   "run_id": "qwen35-9b-sft844-3k-v2-toolcall",
   "checkpoint": "export-844",
   "task_ids": [
@@ -61,5 +61,40 @@
     "P4": 10,
     "P5": 10
   },
-  "notice": "These 50 successful held-out episodes are now intended as public demonstrations. Do not treat them as an unexposed test set. The original frozen benchmark has not been modified."
+  "notice": "These 50 successful held-out episodes are now intended as public demonstrations. Do not treat them as an unexposed test set. The original frozen benchmark has not been modified.",
+  "image_summary": {
+    "unique_images": 55,
+    "by_task": {
+      "P1": {
+        "cases": 10,
+        "with_images": 0,
+        "episode_images": 0,
+        "observed_images": 0
+      },
+      "P2": {
+        "cases": 10,
+        "with_images": 0,
+        "episode_images": 0,
+        "observed_images": 0
+      },
+      "P3": {
+        "cases": 10,
+        "with_images": 10,
+        "episode_images": 32,
+        "observed_images": 29
+      },
+      "P4": {
+        "cases": 10,
+        "with_images": 10,
+        "episode_images": 16,
+        "observed_images": 16
+      },
+      "P5": {
+        "cases": 10,
+        "with_images": 5,
+        "episode_images": 7,
+        "observed_images": 7
+      }
+    }
+  }
 }
