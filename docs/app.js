@@ -16,7 +16,7 @@ if(hero&&$('#hero-image')){$('#hero-image').src=hero.thumbnail;$('#hero-image').
 function stop(){if(timer){clearInterval(timer);timer=null;}const b=$('#play');if(b)b.textContent='▶ Play';}
 function model(){return manifest.models.find(m=>m.id===modelId);}
 function chooseModel(id){modelId=id;renderModels();selectP(primary);loadCase(selectedId||manifest.cases.find(c=>c.p===primary).id);}
-function updateURL(){if(selectedId)history.replaceState(null,'','#case='+selectedId+'&model='+modelId+'&step='+position);}
+function updateURL(){if(selectedId){const url=new URL(location.href);url.searchParams.set('case',selectedId);url.searchParams.set('model',modelId);url.searchParams.set('step',position);if(url.hash.startsWith('#case='))url.hash='examples';history.replaceState(null,'',url);}}
 function renderCoverage(){
  const holder=$('#model-coverage');const table=el('table');const head=el('tr');
  ['Model','Completed formal tasks','These 50 cases','Status'].forEach(t=>head.append(el('th','',t)));table.append(add(el('thead'),head));const body=el('tbody');
@@ -60,7 +60,7 @@ async function loadCase(id,step=0){
  const run=entry.runs[modelId];const requestedModel=modelId;const key=modelId==='ours'?id:modelId+'::'+id;
  if(!run){active=null;position=0;viewer.dataset.case=id;viewer.dataset.model=modelId;viewer.dataset.step='0';viewer.replaceChildren(add(el('div','unavailable'),el('span','model-tag '+model().group,model().name),el('h3','',entry.title),el('p','','No completed recording is available for this model on this case.'),el('p','small','Choose another case or model. A missing recording is not counted as a failed task.')));updateURL();return;}
  try{
-  if(!window.PAB_CASES?.[key])await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=run.file+'?v=models7';script.onload=()=>{script.remove();resolve();};script.onerror=()=>{script.remove();reject(new Error('Unable to load this recording. Please reload.'));};document.head.append(script);});
+  if(!window.PAB_CASES?.[key])await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=run.file+'?v=app8';script.onload=()=>{script.remove();resolve();};script.onerror=()=>{script.remove();reject(new Error('Unable to load this recording. Please reload.'));};document.head.append(script);});
   if(version!==loadVersion||requestedModel!==modelId)return;active=window.PAB_CASES[key];if(!active)throw new Error('This recording did not load. Please reload.');position=Math.max(0,Math.min(step,active.steps.length));render();updateURL();
  }catch(e){if(version===loadVersion)viewer.replaceChildren(el('p','loading',e.message));}
 }
@@ -114,6 +114,17 @@ viewer.append(body);const foot=el('div','viewer-footer');add(foot,el('code','',a
 document.querySelectorAll('[data-p]').forEach(b=>{b.addEventListener('click',()=>{selectP(b.dataset.p);loadCase(manifest.cases.find(c=>c.p===primary).id);});b.addEventListener('keydown',e=>{const tabs=[...document.querySelectorAll('[data-p]')];let i=tabs.indexOf(b);if(e.key==='ArrowRight')i=(i+1)%tabs.length;else if(e.key==='ArrowLeft')i=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')i=0;else if(e.key==='End')i=tabs.length-1;else return;e.preventDefault();tabs[i].focus();tabs[i].click();});});
 $('#close-image').addEventListener('click',()=>$('#image-dialog').close());$('#image-dialog').addEventListener('click',e=>{if(e.target===$('#image-dialog'))$('#image-dialog').close();});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
-function fromHash(){const q=new URLSearchParams(location.hash.slice(1));const id=q.get('case');const entry=manifest.cases.find(c=>c.id===id);if(entry){const wanted=q.get('model');modelId=manifest.models.some(m=>m.id===wanted)?wanted:'ours';renderModels();selectP(entry.p);loadCase(id,Number(q.get('step'))||0);return true;}return false;}
-renderCoverage();window.addEventListener('hashchange',fromHash);if(!fromHash()){renderModels();selectP(primary);loadCase(manifest.cases.find(c=>c.p===primary).id);}
+function fromLocation(){const legacy=new URLSearchParams(location.hash.slice(1));const q=legacy.has('case')?legacy:new URLSearchParams(location.search);const id=q.get('case');const entry=manifest.cases.find(c=>c.id===id);if(entry){const wanted=q.get('model');modelId=manifest.models.some(m=>m.id===wanted)?wanted:'ours';renderModels();selectP(entry.p);loadCase(id,Number(q.get('step'))||0);return true;}return false;}
+function sectionNavigation(){const app=location.hash==='#try-agent';document.querySelectorAll('.section-nav a').forEach(a=>{if(a.hash===(app?'#try-agent':'#examples'))a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});if(app)stop();}
+document.querySelectorAll('a[href="#examples"],a[href="#try-agent"]').forEach(a=>a.addEventListener('click',()=>{stop();const target=$(a.hash+' h2');if(target)target.focus({preventScroll:true});}));
+function mountApp(){
+ const config=window.PAB_APP||{};
+ if(config.status!=='ready')return;
+ let space,embed;try{space=new URL(config.space_url);embed=new URL(config.embed_url);}catch{return;}
+ if(space.origin!=='https://huggingface.co'||!/^\/spaces\/[^/]+\/[^/]+\/?$/.test(space.pathname)||embed.protocol!=='https:'||!embed.hostname.endsWith('.hf.space'))return;
+ const iframe=el('iframe');iframe.src=embed.href;iframe.title='PlantAgentBench photo consultation · Qwen3.5-9B (Thinking)';iframe.loading='lazy';iframe.referrerPolicy='strict-origin-when-cross-origin';
+ $('#app-mount').replaceChildren(iframe);$('#app-status').textContent='Live on Hugging Face';$('#app-status').classList.add('ready');
+ const link=$('#space-link');link.href=space.href;link.hidden=false;
+}
+renderCoverage();mountApp();sectionNavigation();window.addEventListener('hashchange',()=>{sectionNavigation();if(location.hash.startsWith('#case='))fromLocation();});window.addEventListener('popstate',()=>{sectionNavigation();fromLocation();});if(!fromLocation()){renderModels();selectP(primary);loadCase(manifest.cases.find(c=>c.p===primary).id);}
 })();

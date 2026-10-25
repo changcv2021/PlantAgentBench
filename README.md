@@ -41,11 +41,13 @@ Open `docs/index.html` in a modern browser. No Node installation, build step, AP
 
 GitHub Pages publishes the `docs/` directory on the `main` branch. Relative asset paths work under the project URL and when opening the page locally.
 
-## Planned: photo-based P3 / P4 experience
+## Examples and Try the Agent
 
-The next phase is a model release and a GPU-backed Hugging Face Space where visitors can provide a plant image and their own question. The intended initial scope is **P3 diagnosis** and **P4 care decisions**, since these are approachable with an image and a short description.
+The page has two section links: **Examples** for recorded replays and **Try the Agent** for photo consultation below them. The application targets P3 diagnosis and P4 care with **official Qwen3.5-9B (Thinking)** initially; it is distinct from **Ours**, the fine-tuned model in the recordings.
 
-P1, P2, and P5 typically require measurements, environmental context, or records over time. A single uploaded image does not supply that context. Live uploads and hosted inference are **not enabled** in this release; no Hugging Face endpoint is connected.
+The application source is in [`space/`](space/README.md), with image upload, a question field, and separate final-response and generated-thinking displays. **Live deployment is pending**: Hugging Face returned an unexplained ZeroGPU eligibility rejection even though the documented account-age, verified-email and Space-count requirements were verified. No live inference has been validated or enabled.
+
+Once the Space passes a real image request, set the public URLs and `status: 'ready'` in `docs/app-config.js` to embed it. No API keys belong in this frontend. The recorded examples work independently of the Space. Their case, model and step remain in the URL query; section anchors and legacy replay links are supported.
 
 ## Attribution and licensing
 
