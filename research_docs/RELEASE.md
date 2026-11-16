@@ -26,6 +26,16 @@ is supplied as `ci/research-code.yml`, not activated: the publication credential
 does not have GitHub's `workflow` scope. It can be installed by a repository
 maintainer with that permission. Local compute validation uses the same tests.
 
+To run the full suite, include optional construction dependencies because it
+imports the six source adapters, including Excel-based record readers:
+
+```bash
+python -m pip install -e '.[report,construction,test]'
+PAB_TEST_DATASET=/path/to/frozen/core python -m pytest tests -q
+```
+
+The `construction` extra is unnecessary for ordinary frozen-data evaluation.
+
 No benchmark models are rerun, no weights trained, no Gold or episodes modified.
 A clean raw-to-Full rebuild and all-provider serving compatibility are not claimed.
 Dataset metadata discloses an existing Core parent-lock fingerprint discrepancy;

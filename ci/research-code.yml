@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install CPU evaluation package
-        run: python -m pip install -e '.[download,report,test]'
+        run: python -m pip install -e '.[download,report,construction,test]'
       - name: Compile and build package
         run: |
           python -m compileall -q src
