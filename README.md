@@ -1,76 +1,117 @@
-# PlantAgentBench — Recorded Agent Demo
+# PlantAgentBench
 
-**Watch a plant agent investigate, acquire evidence, and decide.**
+**An interactive benchmark for plant investigation, diagnosis, care and follow-up.**
 
-[Open the demo](https://changcv2021.github.io/PlantAgentBench/)
+[Examples](https://changcv2021.github.io/PlantAgentBench/) ·
+[Core-3K](https://huggingface.co/datasets/benchmarkanon/PlantAgentBench-Core3K) ·
+[Full](https://huggingface.co/datasets/benchmarkanon/PlantAgentBench-Full) · [中文](README_zh.md)
 
-This static viewer presents **50 shared cases**, with **501 existing recordings across 11 model configurations**. Switch models on the same case: **Ours · Qwen3.5-9B (Thinking)** (green), **open-weight models** (blue), and **closed-source models** (warm brown). Ours is Qwen3.5-9B fine-tuned on Kimi2.6 trajectories, checkpoint `export-844`.
+Six plant-data sources become **318,760 Agent episodes**, with **5,830 component
+tasks** reported separately. The frozen **Core-3K** contains 3,000 Agent episodes.
+An agent receives an initial observation, acquires allowed evidence through tools,
+and submits a report. Longitudinal episodes may require assessments before later
+archived records become available.
 
-Models with all 50 recordings: Ours, Qwen3.5-9B (Thinking), Qwen3.5-9B, Qwen3.5-27B, Kimi2.6, Gemma4-31B, Claude Opus 5.5, GPT-5.4, GPT-6-Astra, and Grok 4.7. Muse Glimmer 30B has **1/50** matched recordings; all other cases are explicitly unavailable. These counts describe this gallery, not whole-benchmark completion.
+| Family | Plant task | Templates |
+|---|---|---|
+| P1 | Growth monitoring | G01–G03 |
+| P2 | Environment investigation | E01–E03 |
+| P3 | Active diagnosis | D01–D03 |
+| P4 | Care decisions | C01–C03 |
+| P5 | Longitudinal follow-up | L01–L03 |
 
-There are 10 cases per task family:
+Full covers all 15 templates. Core covers 13; G02 and G03 are absent, so Core
+P1-M3 is N/A. Core is a subset of Full, **not a disjoint training pool**.
+Use cumulative protected groups before selecting SFT/RL data.
 
-| Task | What the replay demonstrates |
+## Included
+
+- **Environment and Harness:** frozen PlantEnv, observations, action parsing,
+  evidence access, budgets, stage transitions and the formal P4 care protocol.
+- **Model interfaces:** raw JSON, public JSON Schema constraints, and the native
+  function-calling adapter used for Thinking Base and SFT evaluation.
+- **Offline scoring:** all formal metrics, four tables and P1–P5 × M1–M3 heatmaps,
+  with eligible denominators and content/evidence diagnostics.
+- **Construction:** six-source adapters, 15 templates, Gold construction,
+  normalization and grouping. Rebuilding requires original canonical/feature
+  inputs; it is unnecessary for evaluating frozen releases.
+- **Thinking–Action SFT:** actual filtering, conversion, loss-mask checks,
+  grouped train/validation split and completed training recipe.
+- **Recorded demo:** the existing 50-case multi-model gallery.
+
+Episodes, offline Gold and image archives are distributed on Hugging Face. This
+code release excludes full teacher trajectories, fine-tuned weights, credentials
+and laboratory deployment files. It performs no new model inference and does not
+change frozen episodes, Gold or scoring rules.
+
+## Quick start
+
+Use Python 3.11+. On clusters, run downloads, inference, scoring and training in
+a suitable compute allocation.
+
+```bash
+git clone https://github.com/changcv2021/PlantAgentBench.git
+cd PlantAgentBench
+python -m pip install -e '.[download,report]'
+plantagentbench download --dataset core --output data/core
+plantagentbench inspect --dataset data/core
+```
+
+Both datasets are public. `download` pins the verified publication commits by
+default. For Full (about 74.6 GB including images, catalog, offline Gold and
+provenance), use `plantagentbench download --dataset full --output data/full`.
+Its 318,760 Agent episodes and 5,830 components are stored separately; the CLI
+evaluates Agent episodes by default.
+
+Start a compatible multimodal server separately, with the served model name
+matching the configuration. For a local Chat Completions endpoint:
+
+```bash
+# Small integration check; remove --limit 5 and use a new directory for all Core.
+plantagentbench evaluate --dataset data/core \
+  --config configs/qwen35-9b-thinking.json \
+  --api-base http://127.0.0.1:8000/v1 --output runs/qwen-smoke --limit 5
+plantagentbench score --dataset data/core --run runs/qwen-smoke
+plantagentbench summarize --runs runs/qwen-smoke --output outputs/qwen-smoke
+```
+
+Gold is opened only by the separate offline scoring command. Unchanged runs
+resume using the first saved HTTP 200 per request and skip completed episodes.
+Invalid actions are never regenerated because of their score. Independent shards
+need separate output directories. The runner defaults to one transport attempt
+and stops on infrastructure errors; `--on-error continue` records them separately.
+It has **no automatic dollar-budget controller**: set provider spending limits
+and test a small task list before a paid run.
+
+For remote APIs edit `configs/api-native.example.json`, use supported parameters,
+and pass `--api-key-env YOUR_KEY_VARIABLE`. Never put keys in config files.
+The CLI supports OpenAI-compatible **Chat Completions**; provider-specific
+Responses and Anthropic Messages integrations are not drop-in compatible.
+
+## Documentation
+
+| Guide | Contents |
 |---|---|
-| P1 · Growth monitoring | Comparing recorded measurements and investigating growth trends |
-| P2 · Environment investigation | Querying environmental records against a stated task criterion |
-| P3 · Active diagnosis | Selecting visual and contextual evidence for a plant condition |
-| P4 · Care decisions | Consulting evidence and references to form a care or response decision |
-| P5 · Longitudinal follow-up | Recording an assessment, revealing later archived records, and reassessing |
+| [Evaluation](research_docs/EVALUATION.md) | Protocols, resume, errors, tables and heatmaps |
+| [Construction](research_docs/CONSTRUCTION.md) | Adapters, templates, Gold, rebuild prerequisites |
+| [Training](training/README.md) | Student supervision, 6,965 trajectories, actual settings |
+| [Isolation](research_docs/ISOLATION.md) | Protected evaluation cases and evidence |
+| [Release notes](research_docs/RELEASE.md) | Provenance, portability changes, validation scope |
+| [Recorded demo](DEMO.md) | Gallery interpretation and application status |
 
-## Explore a recording
+## Licensing and validation
 
-Choose a model, task tab and case. Switching the model keeps the same case and resets the replay to the initial observation. Use **Next**, **Back**, the timeline, or **Play** to follow the run. Each step shows the recorded action, environment feedback, current evidence, remaining budget, and stage. Expand the model's recorded reasoning or exact action when useful. Images can be enlarged; the final report includes clickable evidence references. A replay can be downloaded as JSON.
+Original software is [MIT licensed](LICENSE). Images, source text, reference Gold
+and replays retain upstream terms; see [DATA_TERMS.md](DATA_TERMS.md) and the HF
+source notices. The environment reveals recorded evidence; it does not simulate
+new growth, treatment outcomes or future observations.
 
-**Case photos are visible immediately**, beside the recorded investigation. This gallery contains all images registered in that frozen episode, including images the model did not request. Each photo indicates when the agent opened it, or that it was not opened. Click a photo to enlarge it or jump to its recorded inspection step. Record-only episodes explicitly state that they have no images. The page opens on a P3 visual case by default.
+The validation suite installs the package, checks the native-call boundary and training
+conversion, and exercises representative frozen Core episodes with scripted
+actions, including image access and offline scoring. It calls no models. GPU
+serving and a new SFT run are outside this CPU suite. A GitHub Actions template is
+provided at `ci/research-code.yml`; activation requires repository workflow-write
+permission and placing it under `.github/workflows/`.
 
-The replay observation panels render only evidence received by that replay position. The separate visitor photo gallery is a preview and does not change the recorded agent observations. All steps are saved locally in the demo assets, so this is an explanatory replay, not a live or secure evaluation environment.
-
-## What this release does and does not include
-
-- The frontend code and each available model recording of the fixed 50 cases are included. Failures are retained; missing recordings are never replaced by another model’s output.
-- These are curated cases from frozen **Core-3K v2**. Run protocols differ and are labelled. Qwen3.5-9B (Thinking) and Qwen3.5-9B are separate, explicitly labelled entries. Ours uses the Qwen3.5-9B thinking base. They are **not** a random sample, a new evaluation, or an estimate of overall model accuracy.
-- Recorded model reasoning is model-generated text, not a guarantee that its biological claims are correct. Success means the existing task evaluator accepted the submission.
-- Private Gold, source-reference answer tables, the full benchmark, raw API envelopes, credentials, and model weights are not part of this release.
-- Images use the exact frozen benchmark display bytes. The photo gallery includes both requested images and registered images not requested during the saved run, with explicit labels. Source records may already contain documented aggregation or processing. The environment does not simulate plant growth or care outcomes.
-- `demo_manifest.json` lists the active 50 episode IDs and preserves the IDs exposed by previous demo versions. They should no longer be treated as unexposed evaluation examples. This export does not change the original frozen benchmark or its prior results.
-
-## Run locally
-
-Open `docs/index.html` in a modern browser. No Node installation, build step, API key, or model server is required. The site uses local scripts and media and makes no inference requests. It can also be served by any ordinary static web server.
-
-GitHub Pages publishes the `docs/` directory on the `main` branch. Relative asset paths work under the project URL and when opening the page locally.
-
-## Examples and Try the Agent
-
-The page has two section links: **Examples** for recorded replays and **Try the Agent** for photo consultation below them. The application targets P3 diagnosis and P4 care with **official Qwen3.5-9B (Thinking)** initially; it is distinct from **Ours**, the fine-tuned model in the recordings.
-
-The application source is in [`space/`](space/README.md), with image upload, a question field, and separate final-response and generated-thinking displays. **Live deployment is pending**: Hugging Face returned an unexplained ZeroGPU eligibility rejection even though the documented account-age, verified-email and Space-count requirements were verified. No live inference has been validated or enabled.
-
-Once the Space passes a real image request, set the public URLs and `status: 'ready'` in `docs/app-config.js` to embed it. No API keys belong in this frontend. The recorded examples work independently of the Space. Their case, model and step remain in the URL query; section anchors and legacy replay links are supported.
-
-## Attribution and licensing
-
-Original viewer code is MIT licensed. The included source-derived evidence and replay data are governed separately; see [DATA_TERMS.md](DATA_TERMS.md). In particular, MIRAGE-derived materials retain CC BY-SA 4.0 terms. The code license does not relicense upstream images, text, or knowledge entries.
-
-[中文说明](README_zh.md)
-
-## Fixed case selection (retained from v4)
-
-45 cases from the v3 gallery are retained. Five P2 cases are replaced with original image-bearing Eschikon investigations from the same frozen Core-3K v2 and saved SFT run. Selection allows unsuccessful outcomes; each case displays its actual saved task outcome. A run without a final report is labelled explicitly. No new model inference or scoring is performed.
-
-P1 remains record-based. P2 contains five image-bearing and five record-only cases. In all five image-bearing Ours runs, the agent used QUERY → QUERY → SUBMIT and did not inspect the images; those images are explicitly labelled as unobserved. Their saved task outcomes are successful. Images the model did not open are labelled as visitor previews. See [the selection table](DEMO_SELECTION.md) for registered and observed image counts.
-
-Eschikon materials are included for this non-commercial research demonstration under the source's **In Copyright – Non-Commercial Use Permitted** statement. They are excluded from the CC BY-SA replay grant and the MIT code license; see [DATA_TERMS.md](DATA_TERMS.md). Original outputs, scores and frozen tasks remain unchanged.
-
-## Multi-model replay (v5)
-
-Every recording retains its own actions, outcome, final report, image visibility and query cost. Recorded reasoning is displayed only when available; returned reasoning summaries are labelled as summaries. The gallery does not reconstruct hidden reasoning. Different protocols and curated cases prevent interpreting this as a controlled model ranking. No inference, rescoring, Gold edits or task changes were performed.
-
-## Model labels and availability (v6)
-
-- **Qwen3.5-9B**: full-catalog JSON actions, thinking disabled, 4,096 output tokens.
-- **Qwen3.5-9B (Thinking)**: Core-3K native tool calls, thinking enabled, 32,768 output tokens.
-- **Ours · Qwen3.5-9B (Thinking)**: fine-tuned from the thinking base on Kimi2.6 trajectories.
-
-The runs also differ in sampling settings; this is not a controlled thinking-mode ablation. Coverage fractions have been removed from model buttons. [MODEL_COVERAGE.md](MODEL_COVERAGE.md) reports saved full-run progress and exact demo matches. Integration tests are not substituted for formal results. The existing replay files remain unchanged.
+The release passed **12 offline tests** and package builds on 2026-11-16;
+see [validation scope and limitations](research_docs/VALIDATION.md).

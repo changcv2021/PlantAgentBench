@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plantagentbench"
+version = "1.0.0"
+description = "PlantAgentBench: frozen plant-agent episodes, environment, evaluation and Thinking–Action distillation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = ["pydantic>=2.9,<3", "jsonschema>=4.20", "Pillow>=10", "requests>=2.32", "PyYAML>=6"]
+
+[project.optional-dependencies]
+download = ["huggingface-hub>=0.34"]
+report = ["matplotlib>=3.8", "numpy>=1.26"]
+construction = ["pyarrow>=17", "openpyxl>=3.1", "pandas>=2.2", "numpy>=1.26"]
+test = ["pytest>=8", "build>=1.2"]
+
+[project.scripts]
+plantagentbench = "plantbench_public.cli:main"
+
+[project.urls]
+Repository = "https://github.com/changcv2021/PlantAgentBench"
+Demo = "https://changcv2021.github.io/PlantAgentBench/"
+Dataset = "https://huggingface.co/datasets/benchmarkanon/PlantAgentBench-Core3K"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["plantbench_release"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

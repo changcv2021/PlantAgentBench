@@ -1,0 +1,454 @@
+[
+  {
+    "path": "src/plantbench/__init__.py",
+    "source": "public-dataset-runtime/plantbench/__init__.py",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "released_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/agent_harness.py",
+    "source": "public-dataset-runtime/plantbench/agent_harness.py",
+    "original_sha256": "b2cffa28cc91de99c9cbf69145d6c17308fcd3b2f458e69f5cb91d890326e03b",
+    "released_sha256": "b2cffa28cc91de99c9cbf69145d6c17308fcd3b2f458e69f5cb91d890326e03b",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/agent_scoring.py",
+    "source": "public-dataset-runtime/plantbench/agent_scoring.py",
+    "original_sha256": "12eb5366191df422af01e16cd6fff323d029f94a40ed631ed7659536279a2293",
+    "released_sha256": "12eb5366191df422af01e16cd6fff323d029f94a40ed631ed7659536279a2293",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/aggregation.py",
+    "source": "public-dataset-runtime/plantbench/aggregation.py",
+    "original_sha256": "614a99817f636aed45bc95ca50a6ad07705acf35f0ccc4efce968e9b44219f9f",
+    "released_sha256": "614a99817f636aed45bc95ca50a6ad07705acf35f0ccc4efce968e9b44219f9f",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/care_protocol.py",
+    "source": "public-dataset-runtime/plantbench/care_protocol.py",
+    "original_sha256": "a0f75426c2b20f8610e5f5f58c491a715ed5202698c4c85d29726c06133fde74",
+    "released_sha256": "a0f75426c2b20f8610e5f5f58c491a715ed5202698c4c85d29726c06133fde74",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/contracts.py",
+    "source": "public-dataset-runtime/plantbench/contracts.py",
+    "original_sha256": "6aa413540dfc87378327a837672309d1179e08ade0565b1ba291803f64f6dc8c",
+    "released_sha256": "6aa413540dfc87378327a837672309d1179e08ade0565b1ba291803f64f6dc8c",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/environment.py",
+    "source": "public-dataset-runtime/plantbench/environment.py",
+    "original_sha256": "198a472452139cdb64364b545703add7553aec904df6dc9bda0959a637688dce",
+    "released_sha256": "198a472452139cdb64364b545703add7553aec904df6dc9bda0959a637688dce",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/evaluation_tables.py",
+    "source": "public-dataset-runtime/plantbench/evaluation_tables.py",
+    "original_sha256": "8af8fb6923c8f76a8d7fabb4b00af6c361850336b039f4d311981da3bfa7fc61",
+    "released_sha256": "8af8fb6923c8f76a8d7fabb4b00af6c361850336b039f4d311981da3bfa7fc61",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/knowledge.py",
+    "source": "public-dataset-runtime/plantbench/knowledge.py",
+    "original_sha256": "daf081cf578b20b2eb5c60f22971cd8c4b56f39f36f976061c0a7095b131b3f8",
+    "released_sha256": "daf081cf578b20b2eb5c60f22971cd8c4b56f39f36f976061c0a7095b131b3f8",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/protocol.py",
+    "source": "public-dataset-runtime/plantbench/protocol.py",
+    "original_sha256": "18ec5b4b2d0e03d1e6a1dd229dab3feec7c0db1f53f160fd9fe82d2600717de5",
+    "released_sha256": "18ec5b4b2d0e03d1e6a1dd229dab3feec7c0db1f53f160fd9fe82d2600717de5",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/public_schema.py",
+    "source": "public-dataset-runtime/plantbench/public_schema.py",
+    "original_sha256": "0488bbf32a1cf2db53f14d3b72723510902aaba2a98e9c4a319a8a22b237aa10",
+    "released_sha256": "0488bbf32a1cf2db53f14d3b72723510902aaba2a98e9c4a319a8a22b237aa10",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/structured_actions.py",
+    "source": "public-dataset-runtime/plantbench/structured_actions.py",
+    "original_sha256": "212b4be19b526b26e9029fe8ed728961bd7980f22e1af1f20c6007366bee2e0a",
+    "released_sha256": "212b4be19b526b26e9029fe8ed728961bd7980f22e1af1f20c6007366bee2e0a",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/time_policy.py",
+    "source": "public-dataset-runtime/plantbench/time_policy.py",
+    "original_sha256": "2928c88378822a9b6b96e654b5bdd1860e4605c3392af1e069334012ba9cdeb2",
+    "released_sha256": "2928c88378822a9b6b96e654b5bdd1860e4605c3392af1e069334012ba9cdeb2",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/trace.py",
+    "source": "public-dataset-runtime/plantbench/trace.py",
+    "original_sha256": "f3edae6c58a9388c05703810c140e032ea5a1508d58632b4b9bba94b5b876e9f",
+    "released_sha256": "f3edae6c58a9388c05703810c140e032ea5a1508d58632b4b9bba94b5b876e9f",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_pilot/__init__.py",
+    "source": "public-dataset-runtime/plantbench_pilot/__init__.py",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "released_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_pilot/client.py",
+    "source": "public-dataset-runtime/plantbench_pilot/client.py",
+    "original_sha256": "d2eb51baabe250da156a91893f8e6a42ae41f59e91b15c806ddcd5635ae72201",
+    "released_sha256": "3c6bdea194a558d44f03fd82ecb0573c886f5eeeb2827cc7919a7fb815cee65e",
+    "adaptations": [
+      "portable import or explicit operator-controlled storage root"
+    ]
+  },
+  {
+    "path": "src/plantbench_pilot/common.py",
+    "source": "public-dataset-runtime/plantbench_pilot/common.py",
+    "original_sha256": "e5d06e74c2d5b6427c7d7aacff3a81849d8cea192d963679a763a0c491a23b17",
+    "released_sha256": "e5d06e74c2d5b6427c7d7aacff3a81849d8cea192d963679a763a0c491a23b17",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_pilot/wire.py",
+    "source": "public-dataset-runtime/plantbench_pilot/wire.py",
+    "original_sha256": "95ee819c4530272d0ebd51258c4fde39dfb9403598f8048a359f55339c9fffd9",
+    "released_sha256": "95ee819c4530272d0ebd51258c4fde39dfb9403598f8048a359f55339c9fffd9",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_release.py",
+    "source": "public-dataset-runtime/plantbench_release.py",
+    "original_sha256": "91c5e09612d44f87a65e2e3e1c3d06c8d2ead9fd6c104982b11b8e5603f80d65",
+    "released_sha256": "91c5e09612d44f87a65e2e3e1c3d06c8d2ead9fd6c104982b11b8e5603f80d65",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/__init__.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/__init__.py",
+    "original_sha256": "6e2d5c3d6ced18b14ed9945a971bfac920c3adb710e518721cc2abde82960f2e",
+    "released_sha256": "6e2d5c3d6ced18b14ed9945a971bfac920c3adb710e518721cc2abde82960f2e",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/auxiliary_tasks.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/auxiliary_tasks.py",
+    "original_sha256": "a6bf1584db27f80245d95af65ba8441da3bf456f0bb3de6791b0978523a5c903",
+    "released_sha256": "a6bf1584db27f80245d95af65ba8441da3bf456f0bb3de6791b0978523a5c903",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/cases.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/cases.py",
+    "original_sha256": "ba6cf46694f70e0eba20953c840f0c0eb57f4c9218a2ec77e588b2011fefc0c1",
+    "released_sha256": "ba6cf46694f70e0eba20953c840f0c0eb57f4c9218a2ec77e588b2011fefc0c1",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/checkpoints.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/checkpoints.py",
+    "original_sha256": "36654c1ff5991cb64de3210b94256f8d78ac464144a72f5df669cecf5e724123",
+    "released_sha256": "36654c1ff5991cb64de3210b94256f8d78ac464144a72f5df669cecf5e724123",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/consultation_followup.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/consultation_followup.py",
+    "original_sha256": "96ab43675f5162531fd4a79ae0157fabb0c2314cf7955a7be565906bac132d71",
+    "released_sha256": "96ab43675f5162531fd4a79ae0157fabb0c2314cf7955a7be565906bac132d71",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/evaluation_contract.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/evaluation_contract.py",
+    "original_sha256": "307e3f86f664f1dc8962b7920fa3b924cfd2a43fff005210be939e2a213533e2",
+    "released_sha256": "307e3f86f664f1dc8962b7920fa3b924cfd2a43fff005210be939e2a213533e2",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/extended_records.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/extended_records.py",
+    "original_sha256": "954fd02539c3091f8ccddac3ba62102d3b2a69d3d45868a091810aca19d2cf56",
+    "released_sha256": "954fd02539c3091f8ccddac3ba62102d3b2a69d3d45868a091810aca19d2cf56",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/finalize_pack.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/finalize_pack.py",
+    "original_sha256": "5fd87ec4e7630f7f4f804ab6cb565d994cadddc0605581c4056de0aaa6885112",
+    "released_sha256": "5fd87ec4e7630f7f4f804ab6cb565d994cadddc0605581c4056de0aaa6885112",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/group_audit.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/group_audit.py",
+    "original_sha256": "52e3a5adc3cfee8a81b23817c055b84b36974819982cd463b4ff7ade154be572",
+    "released_sha256": "52e3a5adc3cfee8a81b23817c055b84b36974819982cd463b4ff7ade154be572",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/normalization.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/normalization.py",
+    "original_sha256": "b6c4809c55f348c4c2655f407d4e35d9a6a47ee75404a62a45c1dc586a7ceab5",
+    "released_sha256": "b6c4809c55f348c4c2655f407d4e35d9a6a47ee75404a62a45c1dc586a7ceab5",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/oracles.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/oracles.py",
+    "original_sha256": "63ed83639db3e3535c9b03a7fa91430993672f3613c4804c82c07e5d7e187fff",
+    "released_sha256": "63ed83639db3e3535c9b03a7fa91430993672f3613c4804c82c07e5d7e187fff",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/pack_registry.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/pack_registry.py",
+    "original_sha256": "f5dcc4fd32f0d912dbcb7daf49c63bf91319fd6c257a51a4a6d7ea1c3ea17c62",
+    "released_sha256": "f5dcc4fd32f0d912dbcb7daf49c63bf91319fd6c257a51a4a6d7ea1c3ea17c62",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/plantexpert_tasks.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/plantexpert_tasks.py",
+    "original_sha256": "0f366f71d6dd59d09cabece2c4d71d37686793b87f606b3d5d543544c854a858",
+    "released_sha256": "8878a8f810b1f48b61ffe12f049de036dbdcc0615b8368fcf9c31092808707d5",
+    "adaptations": [
+      "portable import or explicit operator-controlled storage root",
+      "portable import or explicit operator-controlled storage root"
+    ]
+  },
+  {
+    "path": "src/plantbench/preparation/records_tasks.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/records_tasks.py",
+    "original_sha256": "264c7064ec32e68bfd4caf7b12b75cf5a9b0e3186a37d467ae2aba1e41785ad9",
+    "released_sha256": "264c7064ec32e68bfd4caf7b12b75cf5a9b0e3186a37d467ae2aba1e41785ad9",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/reference_tasks.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/reference_tasks.py",
+    "original_sha256": "27fe8c18efbb6276545581ae347f20502e588758147bb5f4dc16c6285b7b46b2",
+    "released_sha256": "27fe8c18efbb6276545581ae347f20502e588758147bb5f4dc16c6285b7b46b2",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/references.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/references.py",
+    "original_sha256": "63a0b45c2f52b7714f05e919d991ca58a5dea8d055561aa9ff41416afc4d6bc3",
+    "released_sha256": "63a0b45c2f52b7714f05e919d991ca58a5dea8d055561aa9ff41416afc4d6bc3",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/semantic_dedup.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/semantic_dedup.py",
+    "original_sha256": "80a8b1de081b872fa6103cb6cdeaf888ea2babc38c124b43736047279661a485",
+    "released_sha256": "80a8b1de081b872fa6103cb6cdeaf888ea2babc38c124b43736047279661a485",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench/preparation/taskpack.py",
+    "source": "frozen-runtime-v3/plantbench/preparation/taskpack.py",
+    "original_sha256": "e0347d486717cf420b6aa6f3b53c6cf5e676d1e8a75b7372ad779e8b9ca76e67",
+    "released_sha256": "0135f2955e5c963b0bbd862b184f7dd0cfa4942d7a0696f854d809af01b2ba23",
+    "adaptations": [
+      "portable import or explicit operator-controlled storage root",
+      "portable import or explicit operator-controlled storage root"
+    ]
+  },
+  {
+    "path": "src/plantbench/catalog.py",
+    "source": "frozen-runtime-v3/plantbench/catalog.py",
+    "original_sha256": "af36e143609c2fee8c0976e4b8395cd0ff7393587ad9ae378dce304b83b827d9",
+    "released_sha256": "af36e143609c2fee8c0976e4b8395cd0ff7393587ad9ae378dce304b83b827d9",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/__init__.py",
+    "source": "frozen-runtime-v3/plantbench_data/__init__.py",
+    "original_sha256": "8998bd666a155e051a5bd1a028727c4773bb2ca11f1f4460fe4ca60a0c0a6cd0",
+    "released_sha256": "8998bd666a155e051a5bd1a028727c4773bb2ca11f1f4460fe4ca60a0c0a6cd0",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/common.py",
+    "source": "frozen-runtime-v3/plantbench_data/common.py",
+    "original_sha256": "e4768a5c426ac65573f65cb303de29208a3db24b0477ad5ea505fe6b98afff56",
+    "released_sha256": "e4768a5c426ac65573f65cb303de29208a3db24b0477ad5ea505fe6b98afff56",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/adapters/lettuce.py",
+    "source": "frozen-runtime-v3/plantbench_data/adapters/lettuce.py",
+    "original_sha256": "2b78d13e8dbf9112d2b21ae2046800141e295a41bfc3c9d8ff8c3f309f2669f4",
+    "released_sha256": "2b78d13e8dbf9112d2b21ae2046800141e295a41bfc3c9d8ff8c3f309f2669f4",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/adapters/base.py",
+    "source": "frozen-runtime-v3/plantbench_data/adapters/base.py",
+    "original_sha256": "27fb489966c523550fbe6eafeb97f2cb43746891e005603b2c5484916efb756d",
+    "released_sha256": "27fb489966c523550fbe6eafeb97f2cb43746891e005603b2c5484916efb756d",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/media.py",
+    "source": "frozen-runtime-v3/plantbench_data/media.py",
+    "original_sha256": "b4af18d61c5b5e9f151fd216c785e1b4512b644b09486e3b9dff7148b072fbb4",
+    "released_sha256": "b4af18d61c5b5e9f151fd216c785e1b4512b644b09486e3b9dff7148b072fbb4",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/transfer.py",
+    "source": "frozen-runtime-v3/plantbench_data/transfer.py",
+    "original_sha256": "5d6b44a2ea4f737e922ac4f46f2dade655a34fa547f06a0c74e185215a4b5d23",
+    "released_sha256": "5d6b44a2ea4f737e922ac4f46f2dade655a34fa547f06a0c74e185215a4b5d23",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/discovery.py",
+    "source": "frozen-runtime-v3/plantbench_data/discovery.py",
+    "original_sha256": "ec8bf85cb88df2170106102337790b2b48060fee5f02adf0ef89b2d2f34b13cb",
+    "released_sha256": "ec8bf85cb88df2170106102337790b2b48060fee5f02adf0ef89b2d2f34b13cb",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/models.py",
+    "source": "frozen-runtime-v3/plantbench_data/models.py",
+    "original_sha256": "6447d36ef586d7438358ba0267a7fcdf8882e038ca6895b692fc8f6217514ead",
+    "released_sha256": "6447d36ef586d7438358ba0267a7fcdf8882e038ca6895b692fc8f6217514ead",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/canonical.py",
+    "source": "frozen-runtime-v3/plantbench_data/canonical.py",
+    "original_sha256": "5d7e81f73e47d8c0a500d818124134e69238c3055f8a7b7f2374760344cab559",
+    "released_sha256": "5d7e81f73e47d8c0a500d818124134e69238c3055f8a7b7f2374760344cab559",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/adapters/horti.py",
+    "source": "frozen-runtime-v3/plantbench_data/adapters/horti.py",
+    "original_sha256": "d6ff24810c3d03f62df7e425dd0831ecd2c0a5badb4231cd1d1dbbf82da74148",
+    "released_sha256": "d6ff24810c3d03f62df7e425dd0831ecd2c0a5badb4231cd1d1dbbf82da74148",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/adapters/mirage.py",
+    "source": "frozen-runtime-v3/plantbench_data/adapters/mirage.py",
+    "original_sha256": "a4238d436746e68b24fe0f68039f5a5411c57959188b2fd4050d863661615283",
+    "released_sha256": "a4238d436746e68b24fe0f68039f5a5411c57959188b2fd4050d863661615283",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/adapters/eschikon.py",
+    "source": "frozen-runtime-v3/plantbench_data/adapters/eschikon.py",
+    "original_sha256": "bd86d4841a9f86b77cd1ad35944720ca4bf57e46575f0da2370e5beb25ced0f5",
+    "released_sha256": "bd86d4841a9f86b77cd1ad35944720ca4bf57e46575f0da2370e5beb25ced0f5",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/adapters/tobrfv.py",
+    "source": "frozen-runtime-v3/plantbench_data/adapters/tobrfv.py",
+    "original_sha256": "ddc2030685e20fe10a7e22421c5da25aa1685c8a8a8f2966042442fb514e5e9f",
+    "released_sha256": "ddc2030685e20fe10a7e22421c5da25aa1685c8a8a8f2966042442fb514e5e9f",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_data/adapters/__init__.py",
+    "source": "frozen-runtime-v3/plantbench_data/adapters/__init__.py",
+    "original_sha256": "890aa7271a07821d411420282358ae8859e2c0d6e7e80f463c50e4e916217a39",
+    "released_sha256": "890aa7271a07821d411420282358ae8859e2c0d6e7e80f463c50e4e916217a39",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_public/native/adapter.py",
+    "source": "thinking-base-and-sft-evaluation/adapter.py",
+    "original_sha256": "43e222efe97d79da760c1df21a4b625a5023a59c14ede9c744e041ce8db3723e",
+    "released_sha256": "43e222efe97d79da760c1df21a4b625a5023a59c14ede9c744e041ce8db3723e",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_public/native/tools.py",
+    "source": "thinking-base-and-sft-evaluation/tools.py",
+    "original_sha256": "1561d86f0ddef3883020e90417153abcb47b8fab543eea35c261751de8310bbc",
+    "released_sha256": "1561d86f0ddef3883020e90417153abcb47b8fab543eea35c261751de8310bbc",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_public/native/kimi_client.py",
+    "source": "thinking-base-and-sft-evaluation/kimi_client.py",
+    "original_sha256": "2b566cde7481adf38996168d08dd6f5f826fce4e1bd83d8ed3d38c2d4b9b96c7",
+    "released_sha256": "2b566cde7481adf38996168d08dd6f5f826fce4e1bd83d8ed3d38c2d4b9b96c7",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_training/qwen_sft.py",
+    "source": "kimi-teacher-training/qwen_sft.py",
+    "original_sha256": "736bd35d0acdd1fdf0d2608f062b75bf24504db609f0e1729976d1ecbeecbb7b",
+    "released_sha256": "d48263688e737e777a0e847656d38d3e98a37492aa71328546d1ad0313a175c5",
+    "adaptations": [
+      "portable import or explicit operator-controlled storage root"
+    ]
+  },
+  {
+    "path": "src/plantbench_training/qwen_mask.py",
+    "source": "kimi-teacher-training/qwen_mask.py",
+    "original_sha256": "6ed5777e065f549c083548eaa90196abd272a1ae047949f3992e970e0bc52edc",
+    "released_sha256": "6ed5777e065f549c083548eaa90196abd272a1ae047949f3992e970e0bc52edc",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_training/quality.py",
+    "source": "kimi-teacher-training/score.py:QUALITY_VERSION..quality",
+    "original_sha256": "49939f075955d7b4d135dc101b4ed13970e776626de7e5ec5d530f6e2d2d16a9",
+    "released_sha256": "e27570af5f7a1a65e65b0ca860c2b31d57a629c96d233c6bbdbbf1e5dbf6d933",
+    "adaptations": [
+      "pure constants and functions extracted verbatim",
+      "trim trailing blank lines"
+    ]
+  },
+  {
+    "path": "src/plantbench_training/to_swift.py",
+    "source": "completed-qwen35-sft/to_swift.py",
+    "original_sha256": "798ac1fa6c6b59c19ce05a000c5f7768b03a4f50c413aeb40478a8426961062a",
+    "released_sha256": "798ac1fa6c6b59c19ce05a000c5f7768b03a4f50c413aeb40478a8426961062a",
+    "adaptations": []
+  },
+  {
+    "path": "src/plantbench_training/build_dataset.py",
+    "source": "completed-qwen35-sft/build_dataset.py",
+    "original_sha256": "1f7d32066ade4549f0443077cb80cdf2bde53dd7e471553491e144cc3b282c85",
+    "released_sha256": "13623967e2791d56460cdafd3e81afacbd67f77f62e3057b83f91c2ad888756d",
+    "adaptations": [
+      "portable import or explicit operator-controlled storage root"
+    ]
+  },
+  {
+    "path": "src/plantbench_training/check_swift_align.py",
+    "source": "completed-qwen35-sft/check_swift_align.py",
+    "original_sha256": "8c1645f45657c09cc56a200c125d990ef6c411680101743700dfefe4929d873a",
+    "released_sha256": "b355d12ffbd1353234406f08f707deff193a07b55949ff363302a42683fd6ca6",
+    "adaptations": [
+      "portable import or explicit operator-controlled storage root",
+      "portable import or explicit operator-controlled storage root"
+    ]
+  },
+  {
+    "path": "training/zero3_optim_offload.json",
+    "source": "completed-qwen35-sft/zero3_optim_offload.json",
+    "original_sha256": "b5a61ee3c60bf63d5ee472b173c9df0fe096cae2b950bb6bc2e027527ceb1fa5",
+    "released_sha256": "b5a61ee3c60bf63d5ee472b173c9df0fe096cae2b950bb6bc2e027527ceb1fa5",
+    "adaptations": []
+  }
+]
