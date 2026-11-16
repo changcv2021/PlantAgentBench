@@ -28,7 +28,7 @@ plantagentbench score --dataset data/core --run runs/qwen-smoke
 plantagentbench summarize --runs runs/qwen-smoke --output outputs/qwen-smoke
 ```
 
-删去 `--limit 5` 并使用新的目录可测评全部 Core。Full 通过 `download --dataset full --revision <HF提交号>` 下载。大型下载、推理、评分和训练应在合适的计算资源中运行。
+删去 `--limit 5` 并使用新的目录可测评全部 Core。两套数据均已公开，下载命令默认固定到已验证版本。Full（约 74.6 GB）通过 `plantagentbench download --dataset full --output data/full` 下载；组件任务单独保存，运行器默认测评 Agent 任务。大型下载、推理、评分和训练应在合适的计算资源中运行。
 
 模型只能接收环境公开的观察和工具；Gold 由独立评分命令读取。输出包括任务成功率、里程碑进度、格式有效率、内容正确性与覆盖率、证据支持、合法工具使用、证据获取和查询成本，以及 M1–M3 热图。
 

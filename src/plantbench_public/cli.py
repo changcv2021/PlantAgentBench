@@ -13,6 +13,7 @@ from urllib.parse import urlsplit
 from plantbench_release import Dataset
 
 CORE_REVISION = 'a6334d083abebddbd9b6dfdd05afb746b79ef562'
+FULL_REVISION = '49a5fc79b7078d84f01d2143a813dbe73eaf9654'
 
 
 def write_json(path, value):
@@ -260,11 +261,9 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.command == 'download':
         from huggingface_hub import snapshot_download
-        if args.dataset == 'full' and not args.revision:
-            parser.error('Pin the Full dataset commit with --revision from its HF repository')
         name = 'PlantAgentBench-Core3K' if args.dataset == 'core' else 'PlantAgentBench-Full'
         snapshot_download('benchmarkanon/' + name, repo_type='dataset', local_dir=args.output,
-                          revision=args.revision or CORE_REVISION)
+                          revision=args.revision or (CORE_REVISION if args.dataset == 'core' else FULL_REVISION))
     elif args.command == 'inspect':
         ds = Dataset(args.dataset)
         try:

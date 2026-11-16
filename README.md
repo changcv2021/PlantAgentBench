@@ -57,6 +57,12 @@ plantagentbench download --dataset core --output data/core
 plantagentbench inspect --dataset data/core
 ```
 
+Both datasets are public. `download` pins the verified publication commits by
+default. For Full (about 74.6 GB including images, catalog, offline Gold and
+provenance), use `plantagentbench download --dataset full --output data/full`.
+Its 318,760 Agent episodes and 5,830 components are stored separately; the CLI
+evaluates Agent episodes by default.
+
 Start a compatible multimodal server separately, with the served model name
 matching the configuration. For a local Chat Completions endpoint:
 
