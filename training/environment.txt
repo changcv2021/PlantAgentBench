@@ -1,0 +1,6 @@
+# Versions recorded in the completed experiment, not installed by the CPU evaluator.
+ms-swift==4.6.0
+transformers==5.19.0
+deepspeed==0.19.8
+# PyTorch: 2.10.0+cu128, installed for the operator's CUDA platform.
+# FlashAttention and Liger must match the CUDA/PyTorch stack.

@@ -1,0 +1,11 @@
+{
+  "label": "Your model (record its reasoning setting)",
+  "protocol": "native",
+  "image_channel": "tool",
+  "environment_seed": 0,
+  "sampling_namespace": "public-api-native-v1",
+  "request_params": {
+    "model": "REPLACE_WITH_YOUR_DEPLOYMENT",
+    "max_tokens": 32768, "n": 1, "stream": false, "tool_choice": "auto"
+  }
+}

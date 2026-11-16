@@ -1,0 +1,13 @@
+{
+  "label": "Qwen3.5-9B (Thinking)",
+  "protocol": "native",
+  "image_channel": "tool",
+  "environment_seed": 0,
+  "sampling_namespace": "public-qwen35-thinking-v1",
+  "request_params": {
+    "model": "plantagent-model", "temperature": 0.6, "top_p": 0.95, "top_k": 20,
+    "max_tokens": 32768, "presence_penalty": 0.0, "frequency_penalty": 0.0,
+    "n": 1, "stream": false, "seed": "harness",
+    "chat_template_kwargs": {"enable_thinking": true}, "tool_choice": "auto"
+  }
+}
