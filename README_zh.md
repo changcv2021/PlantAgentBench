@@ -44,3 +44,5 @@ plantagentbench summarize --runs runs/qwen-smoke --output outputs/qwen-smoke
 本次发布不包含完整教师轨迹和微调权重。构建代码保留真实规则，仍依赖原始登记清单及 canonical/feature 输入；直接测评只需冻结数据。训练前按 [隔离说明](research_docs/ISOLATION.md) 排除 Core 及关联病例与证据。
 
 详见 [测评](research_docs/EVALUATION.md)、[构建](research_docs/CONSTRUCTION.md)、[训练](training/README.md) 和 [演示说明](DEMO_zh.md)。代码 MIT；数据与图像按上游各自许可使用。
+
+发布验证已完成：**12 项离线测试全部通过**，并成功构建安装包。检查覆盖 13 类 Core 模板、真实证据读取、三种调用协议及评分入口；详见 [验证范围](research_docs/VALIDATION.md)。

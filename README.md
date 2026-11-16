@@ -112,3 +112,6 @@ actions, including image access and offline scoring. It calls no models. GPU
 serving and a new SFT run are outside this CPU suite. A GitHub Actions template is
 provided at `ci/research-code.yml`; activation requires repository workflow-write
 permission and placing it under `.github/workflows/`.
+
+The release passed **12 offline tests** and package builds on 2026-11-16;
+see [validation scope and limitations](research_docs/VALIDATION.md).
